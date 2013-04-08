@@ -1,0 +1,15 @@
+## compiled source
+*.o
+*.so
+
+## hidden backups
+*.swp
+*~
+
+## ROS things
+cmake_install.cmake
+build/
+bin/
+lib/
+msg_gen/
+srv_gen/
