@@ -1,0 +1,17 @@
+<package>
+  <description brief="alfred_drive">
+
+     alfred_drive
+
+  </description>
+  <author>Nathan Grubb</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/alfred_drive</url>
+  <depend package="roscpp"/>
+  <depend package="std_msgs"/>
+  <depend package="alfred_msg"/>
+
+</package>
+
+

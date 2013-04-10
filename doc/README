@@ -1,0 +1,11 @@
+Alfred
+Cornell Cup 2013, Columbia University
+
+The docs contained here will be updated as they are developed.
+A general outline of the project, its mechanical and electrical desgin,
+is assumed. See our other documents, project proposals and presentations
+for this documentation.
+
+Included here is teh documentation of the software system. Primarily, this
+consists of documenting each ROS node, its function, and the topics they
+publish and subscribe to.

@@ -1,0 +1,32 @@
+Alfred Topics
+
+This document contatins the names, format and purpose of each custom ROS topic
+used by Alfred. They are defined in the ROS package alfred_msg.
+
+
+FSRDirection.msg
+
+ float32 x
+ float32 y
+ bool followPressed
+
+ FSRDirection passes the direction indicated by the FSR ring. This direction is
+ initially computed by the PIC pre-proccessor, and then communicated by UART over
+ USB to the Atom development board. Then it is published within this message by
+ the no alfred_table.
+
+ x and y are the cartesian components of the direction indicated.
+ followPressed is the state of a single-bit button, which is used to indicate the
+   start of follow mode. It will only be true while the button is pressed.
+
+
+FSRUpDown
+
+ int8 UpDown
+
+ FSRUpDown passes the desired vertical direction, indicated by the FSR ring. This
+ direction is initially computed by the PIC pre-proccessor, and then communicated
+ by UART over USB to the Atom development board. Then it is published within this
+ message by the no alfred_table. 
+
+ UpDown is a single int. 0 corresponds to no movement, -1 to down, 1 to up.

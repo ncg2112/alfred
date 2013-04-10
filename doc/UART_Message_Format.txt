@@ -1,0 +1,22 @@
+Alfred UART Message Format
+
+The status of the control elements of Alfred, that is the FSR sensor ring, the up
+and down sensors, and the follow button, is pre-processed by an off-board PIC.
+This informatin is then passed to the Atom development board by UART over USB.
+The format of the messages is defined here.
+
+NOTE:
+ This affects the ROS node alfred_table, and the c code on the PIC.
+
+Message Format:
+
+"
+DirX: %10f;DirY: %10f;Follow: %1d;UpDown: %1d;\n
+"
+
+DirX will be a 10-digit float, the x-component of the indicated direction
+DirY will be a 10-digit float, the y-component of the indicated direction
+Follow will be a 1-digit int, the status of the follow button
+       	       	 	      1 for pressed, 0 for not pressed
+UpDown will be a 1-digit int, the status of the up/down sensor
+       	       	 	      0 for not pressed, -1 for down, 1 for up
