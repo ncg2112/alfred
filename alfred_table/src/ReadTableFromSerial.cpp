@@ -1,3 +1,17 @@
+/*
+ * ReadTableFromSerial.cpp
+ *
+ * Nathan Grubb, March 2013
+ * Serial Read/Write code derived from 
+ *     http://www.tldp.org/HOWTO/Serial-Programming-HOWTO/x115.html
+ *
+ * This ROS node reads the USB serial port data coming from the sensor
+ * pre-proccessor board.
+ * It does some formatting and sanity checks, and publishes them as ROS topics
+ *
+ */
+
+// serial
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -8,38 +22,48 @@
 #include <string>
 #include <unistd.h>
 
-/* baudrate settings are defined in <asm/termbits.h>, which is
-   included by <termios.h> */
-#define BAUDRATE B9600//B38400            
-/* change this definition for the correct port */
-//#define MODEMDEVICE "/dev/ttyUSB3"
-#define _POSIX_SOURCE 1 /* POSIX compliant source */
+// ROS
+#include "ros/ros.h"
+#include "std_msgs/String.h"
+#include "alfred_msg/FSRDirection.h"
+#include "alfred_msg/FSRUpDown.h"
 
-#define FALSE 0
-#define TRUE 1
+// CPP
+#include <sstream>
+#include <boost/regex.hpp>
+#include <boost/lexical_cast.hpp>
 
-volatile int STOP=FALSE; 
+#define BAUDRATE B9600            
+#define _POSIX_SOURCE 1 
 
 int main(int argc, char** argv)
 {
+  /********************
+   * Set up ROS node
+   */
+  ros::init(argc, argv, "talker");
+  ros::NodeHandle n;
+
+  ros::Publisher tableDir_pub = n.advertise<alfred_msg::FSRDirection>("table_direction", 100);
+  ros::Publisher tableUpDown_pub = n.advertise<alfred_msg::FSRUpDown>("table_updown", 100);
+
+  /*******************
+   * Set up serial reader
+   */
   int fd,c, res;
   struct termios oldtio,newtio;
   char buf[255];
 
   char* modemDevice;
-  modemDevice =  "/dev/ttyACM0";
+  modemDevice =  "/dev/ttyUSB0";
   if( argc > 1 )
     modemDevice = argv[1];
-  /* 
-     Open modem device for reading and writing and not as controlling tty
-     because we don't want to get killed if linenoise sends CTRL-C.
-  */
+
   fd = open(modemDevice, O_RDWR | O_NOCTTY ); 
   if (fd <0) {perror(modemDevice); return -1; }
         
   tcgetattr(fd,&oldtio); /* save current serial port settings */
   memset(&newtio, 0, sizeof newtio );
-  //bzero(&newtio, sizeof(newtio)); /* clear struct for new port settings */
         
   /* 
      BAUDRATE: Set bps rate. You could also use cfsetispeed and cfsetospeed.
@@ -69,7 +93,8 @@ int main(int argc, char** argv)
     disable all echo functionality, and don't send signals to calling program
   */
   newtio.c_lflag = ICANON;
-         
+    
+  // TODO - do we need this control characters crap?
   /* 
      initialize all control characters 
      default values can be found in /usr/include/termios.h, and are given
@@ -98,28 +123,36 @@ int main(int argc, char** argv)
   */
   tcflush(fd, TCIFLUSH);
   tcsetattr(fd,TCSANOW,&newtio);
-        
-  /*
-    terminal settings done, now handle input
-    In this example, inputting a 'z' at the beginning of a line will 
-    exit the program.
-  */
+  
+  /*******************
+   * now loop, read serail and publish messages
+   */
   const std::string whiteSpaces( " \f\n\r\t\v" );
-
-  while (STOP==FALSE) {     /* loop until we have a terminating condition */
-    /* read blocks program execution until a line terminating character is 
-       input, even if more than 255 chars are input. If the number
-       of characters read is smaller than the number of chars available,
-       subsequent reads will return the remaining chars. res will be set
-       to the actual number of characters actually read */
+  while (ros::ok()) {
     res = read(fd,buf,255); 
-    buf[res]=0;             /* set end of string, so we can printf */
+    buf[res]=0;  /* set end of string, so we can printf */
     std::string readIn(buf);
     std::string::size_type pos = readIn.find_last_not_of( whiteSpaces );
     readIn.erase( pos + 1 );  
-    if( readIn.compare( "" ) ) // don't print nothing
-      printf(":%s\n", readIn.c_str());
-    if (buf[0]=='z') STOP=TRUE;
+
+    std_msgs::String msg;
+    msg.data = readIn;
+    if( readIn.compare( "" ) ){
+      ROS_INFO( "Recieved [%s]\n", readIn.c_str() );
+
+      boost::regex e("^DirX: ([-+]?[0-9]*\.?[0-9]+);DirY: ([-+]?[0-9]*\.?[0-9]+);Follow: ([01]);UpDown ([-]?[01]);");
+      boost::smatch result;
+      if( ! boost::regex_search(readIn, result, e) ){
+	ROS_ERROR( "ERROR! Message recieved over UART wrong format!\n");
+	continue;
+      }
+
+      //double dirY = boost::lexical_cast<double>(result[1].first);
+      ROS_INFO( "DirY is %f\n", dirY );
+
+      tableDir_pub.publish(msg);
+      tableUpDown_pub.publish(msg);
+    }
   }
   /* restore the old port settings */
   tcsetattr(fd,TCSANOW,&oldtio);
