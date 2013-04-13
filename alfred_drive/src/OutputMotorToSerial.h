@@ -59,10 +59,12 @@ class OutputMotorToSerial {
    double mBase2;
    double mBase3;
  
-  /*
-   * The name of the serial device in /dev
-   */
-  std::string mSerialDevice;
+   bool mReceivedOrder;
+
+   /*
+    * The name of the serial device in /dev
+    */
+   std::string mSerialDevice;
       
 }; 
 

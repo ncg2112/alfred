@@ -35,22 +35,19 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nathan/ros-workspace/alfred/alfred_table
+CMAKE_SOURCE_DIR = /home/alfred/electric_workspace/alfred/alfred_table
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nathan/ros-workspace/alfred/alfred_table
+CMAKE_BINARY_DIR = /home/alfred/electric_workspace/alfred/alfred_table
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
+	/usr/bin/cmake -i .
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,9 +66,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nathan/ros-workspace/alfred/alfred_table/CMakeFiles /home/nathan/ros-workspace/alfred/alfred_table/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfred/electric_workspace/alfred/alfred_table/CMakeFiles /home/alfred/electric_workspace/alfred/alfred_table/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nathan/ros-workspace/alfred/alfred_table/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfred/electric_workspace/alfred/alfred_table/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -97,6 +94,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named HelloSerial
+
+# Build rule for target.
+HelloSerial: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 HelloSerial
+.PHONY : HelloSerial
+
+# fast build rule for target.
+HelloSerial/fast:
+	$(MAKE) -f CMakeFiles/HelloSerial.dir/build.make CMakeFiles/HelloSerial.dir/build
+.PHONY : HelloSerial/fast
 
 #=============================================================================
 # Target rules for targets named ROSBUILD_genmsg_cpp
@@ -216,6 +226,19 @@ rospack_genmsg/fast:
 .PHONY : rospack_genmsg/fast
 
 #=============================================================================
+# Target rules for targets named rospack_genmsg_all
+
+# Build rule for target.
+rospack_genmsg_all: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rospack_genmsg_all
+.PHONY : rospack_genmsg_all
+
+# fast build rule for target.
+rospack_genmsg_all/fast:
+	$(MAKE) -f CMakeFiles/rospack_genmsg_all.dir/build.make CMakeFiles/rospack_genmsg_all.dir/build
+.PHONY : rospack_genmsg_all/fast
+
+#=============================================================================
 # Target rules for targets named rospack_genmsg_libexe
 
 # Build rule for target.
@@ -307,6 +330,21 @@ tests/fast:
 .PHONY : tests/fast
 
 # target to build an object file
+src/HelloSerial.o:
+	$(MAKE) -f CMakeFiles/HelloSerial.dir/build.make CMakeFiles/HelloSerial.dir/src/HelloSerial.o
+.PHONY : src/HelloSerial.o
+
+# target to preprocess a source file
+src/HelloSerial.i:
+	$(MAKE) -f CMakeFiles/HelloSerial.dir/build.make CMakeFiles/HelloSerial.dir/src/HelloSerial.i
+.PHONY : src/HelloSerial.i
+
+# target to generate assembly for a file
+src/HelloSerial.s:
+	$(MAKE) -f CMakeFiles/HelloSerial.dir/build.make CMakeFiles/HelloSerial.dir/src/HelloSerial.s
+.PHONY : src/HelloSerial.s
+
+# target to build an object file
 src/ReadTableFromSerial.o:
 	$(MAKE) -f CMakeFiles/ReadTableFromSerial.dir/build.make CMakeFiles/ReadTableFromSerial.dir/src/ReadTableFromSerial.o
 .PHONY : src/ReadTableFromSerial.o
@@ -327,6 +365,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... HelloSerial"
 	@echo "... ROSBUILD_genmsg_cpp"
 	@echo "... ROSBUILD_genmsg_lisp"
 	@echo "... ROSBUILD_gensrv_cpp"
@@ -338,6 +377,7 @@ help:
 	@echo "... rosbuild_precompile"
 	@echo "... rosbuild_premsgsrvgen"
 	@echo "... rospack_genmsg"
+	@echo "... rospack_genmsg_all"
 	@echo "... rospack_genmsg_libexe"
 	@echo "... rospack_gensrv"
 	@echo "... test"
@@ -345,6 +385,9 @@ help:
 	@echo "... test-results"
 	@echo "... test-results-run"
 	@echo "... tests"
+	@echo "... src/HelloSerial.o"
+	@echo "... src/HelloSerial.i"
+	@echo "... src/HelloSerial.s"
 	@echo "... src/ReadTableFromSerial.o"
 	@echo "... src/ReadTableFromSerial.i"
 	@echo "... src/ReadTableFromSerial.s"

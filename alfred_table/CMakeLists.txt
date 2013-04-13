@@ -30,4 +30,5 @@ rosbuild_genmsg()
 #target_link_libraries(example ${PROJECT_NAME})
 
 rosbuild_add_executable( ReadTableFromSerial src/ReadTableFromSerial.cpp)
+rosbuild_add_executable( HelloSerial src/HelloSerial.cpp)
 

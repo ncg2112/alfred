@@ -6,6 +6,25 @@ A general outline of the project, its mechanical and electrical desgin,
 is assumed. See our other documents, project proposals and presentations
 for this documentation.
 
-Included here is teh documentation of the software system. Primarily, this
+Included here is the documentation of the software system. Primarily, this
 consists of documenting each ROS node, its function, and the topics they
 publish and subscribe to.
+
+
+
+SETUP:
+
+Clone the git repo github:ncg2112/alfred
+ git clone git@github.com:ncg2112/alfred.git
+
+Note: To push to this repo you need to have a github account that has permission
+to push, which can be set up by nathan, and the computer you are pushing from
+must have its ssh key registered on github. This is already set up on Alfred.
+
+Setup ROS workspace
+ rosws set ~/electric_workspace/alfred
+
+Assuming that you cloned the alfred repository to ~/electric_workspace.
+Each package within the Alfred workspace is already set up as a ROS
+package, there is no need to run roscreate-pkg unless you are creating
+a new package.

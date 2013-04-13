@@ -2,8 +2,6 @@
  * OutputMotorToSerial.cpp
  *
  * Nathan Grubb, March 2013
- * Serial Read/Write code derived from 
- *     http://www.tldp.org/HOWTO/Serial-Programming-HOWTO/x115.html
  *
  * This ROS node subscribes to messages from other nodes that wish to drive the motors.
  * It does some safety checks, then outputs the drive signals to an arduino which will
@@ -12,15 +10,7 @@
  */
 
 // serial
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <termios.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <string>
-#include <unistd.h>
+#include "alfred_msg/SerialIO.h"
 
 // CPP
 #include <sstream>
@@ -30,12 +20,26 @@
 #define _POSIX_SOURCE 1 
 
 
-OutputMotorToSerial::OutputMotorToSerial( ){ }
+OutputMotorToSerial::OutputMotorToSerial( ){ 
+   
+   mTargetBase1 = .5;
+   mTargetBase2 = .5;
+   mTargetBase3 = .5;
+
+   mBase1 = .5;
+   mBase2 = .5;
+   mBase3 = .5;
+}
 
 void OutputMotorToSerial::callbackBase( const boost::shared_ptr<alfred_msg::DriveBase const>& driveOrder){
 
-   ROS_INFO( "Received Base Order: [%f,%f,%f]", driveOrder->motor1, driveOrder->motor2, driveOrder->motor3);
-
+   ROS_DEBUG( "Received Base Order: [%f,%f,%f]", driveOrder->motor1, driveOrder->motor2, driveOrder->motor3);
+   
+   mTargetBase1 = driveOrder->motor1;
+   mTargetBase2 = driveOrder->motor2;
+   mTargetBase3 = driveOrder->motor3;
+   
+   mReceivedOrder = true;
 }
 
 void OutputMotorToSerial::start(int argc, char** argv){
@@ -49,11 +53,108 @@ void OutputMotorToSerial::start(int argc, char** argv){
    ROS_INFO( "Starting Subscriber" );
    ros::Subscriber sub = n.subscribe("DriveBase", 2, OutputMotorToSerial::staticCallbackBase ); 
 
-   ROS_INFO( "Starting serial" );
-   
-   /*******************
-    * Set up serial writer
+   /********************
+    * Setup loop variables and start serial
     */
+   if( argc > 1 )
+      mSerialDevice = argv[1];
+   else
+      mSerialDevice = "/dev/ttyACM0";
+
+   int fd = serialport_init(mSerialDevice.c_str(), B115200);
+   if(fd < 0){
+      ROS_ERROR( "Could not open serial device \'%s\'\n", mSerialDevice.c_str() ); 
+      return;
+   }
+   usleep( 3000 * 1000 );
+   
+   double loopRate = 10.0;     // In Hz
+   ros::Rate rate(loopRate);
+
+   double orderTimeout = 0.25;    // In seconds
+   int maxNumLoopsWithoutOrder = (int)( orderTimeout * loopRate );
+   int numLoopsWithoutOrder(-1);
+    
+   double maxAcc = 0.1;     // measured in % per second
+   double maxAccPerLoop = maxAcc / loopRate;
+
+   ROS_DEBUG( "Max Acc Per Loop: %f", maxAccPerLoop );
+
+   while (n.ok()) {
+
+      // If we haven't yet started
+      if( numLoopsWithoutOrder == -1){
+         mBase1 = .5;
+         mBase2 = .5;
+         mBase3 = .5;
+      }
+      // Safety Check 1 : time without orders
+      else if( numLoopsWithoutOrder >= maxNumLoopsWithoutOrder ){
+
+         mBase1 = .5;
+         mBase2 = .5;
+         mBase3 = .5;
+         ROS_ERROR( "Base Motor to Serial hasn't received a new motor order in %f mS!", 1000 * orderTimeout );
+      }
+      // Safety check passed, ramp motors to target
+      else{
+   
+         double diff1 = mTargetBase1 - mBase1;
+         double diff2 = mTargetBase2 - mBase2;
+         double diff3 = mTargetBase3 - mBase3;
+    
+         ROS_INFO( "Targets are [%f,%f,%f]", mTargetBase1, mTargetBase2, mTargetBase3); 
+         ROS_INFO( "Diffs are: [%f,%f,%f]", diff1, diff2, diff3);
+
+         diff1 = diff1 > 0 ? std::min(diff1, maxAccPerLoop) : std::max(diff1, -1.0*maxAccPerLoop);
+         diff2 = diff2 > 0 ? std::min(diff2, maxAccPerLoop) : std::max(diff2, -1.0*maxAccPerLoop);
+         diff3 = diff3 > 0 ? std::min(diff3, maxAccPerLoop) : std::max(diff3, -1.0*maxAccPerLoop);
+        
+         ROS_INFO( "After thresh diffs are: [%f,%f,%f]", diff1, diff2, diff3);
+
+         mBase1 = mBase1 + diff1;
+         mBase2 = mBase2 + diff2;
+         mBase3 = mBase3 + diff3;
+      }
+    
+      if( numLoopsWithoutOrder >= 0 ) 
+         numLoopsWithoutOrder++;
+      if( mReceivedOrder == true ){
+         numLoopsWithoutOrder = 0;
+         mReceivedOrder = false;
+      }
+
+      ROS_INFO( "Sending output to base: [%f, %f, %f]", mBase1, mBase2, mBase3);
+ 
+      //write
+      std::stringstream ss;
+      ss << mBase1 << ";" << mBase2 << ";" << mBase3 << ";\0";
+      std::string msg = ss.str();
+
+      serialport_write(fd, msg.c_str() );
+
+      ROS_INFO("\n");
+      rate.sleep();
+      ros::spinOnce();
+   }
+
+   serialport_close(fd);
+}
+
+int main(int argc, char** argv)
+{
+  gOutputMotorHandler = new OutputMotorToSerial();
+  gOutputMotorHandler->start(argc, argv);
+
+  return 0;
+}
+
+
+
+/****************************************************
+OLD SERIAL
+*/
+#if 0 
    int fd;
    struct termios oldtio,newtio;
    char buf[255];
@@ -134,30 +235,14 @@ void OutputMotorToSerial::start(int argc, char** argv){
     * now loop, write serial and publish messages
     */
    const std::string whiteSpaces( " \f\n\r\t\v" );
-   int index(0);
-   ros::Rate rate(300);
 
-   while (1) {
-       //write
-       index++;
-       char writeBuf[255];
-       if( index % 2 == 0 )
-          strcpy(writeBuf, "1\r\n");
-       else
-          strcpy(writeBuf, "0\r\n");
-       //buf[1]='\0'; 
-       int sizeWritten = write(fd,writeBuf,3);
-       rate.sleep();
-   }
-   /* restore the old port settings */
-   tcsetattr(fd,TCSANOW,&oldtio);
-   close(fd);
-}
+   int loopRate = 100;           // in Hz
+   ros::Rate rate(loopRate);
+   /*
+    * Do safety checks in this loop.
+    * First Order: If no orders received within the last 250 ms, turn off motors
+    * Second Order: TODO
+    */
+#endif
 
-int main(int argc, char** argv)
-{
-  gOutputMotorHandler = new OutputMotorToSerial();
-  gOutputMotorHandler->start(argc, argv);
 
-  return 0;
-}
