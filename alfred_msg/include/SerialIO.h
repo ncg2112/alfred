@@ -62,21 +62,37 @@ int serialport_write(int fd, const char* str)
 }
 
 
-int serialport_read_until(int fd, char* buf, char until)
+/*
+ * Reads from the serial port indicaed by fd till the char until
+ * is hit, then copies that into buf;
+ *
+ * @param  int    fd
+ * @arg    char*  buf. Valid if return != -1
+ * @param  char   until
+ * @param  int    timeout in us
+ *
+ * @return int   the number of characters read. -1 if failed
+ */
+int serialport_read_until(int fd, char* buf, char until, int timeout)
 {
+    // delay to wait if we don't see a char immediately
+    int uSecDelay(10);
+    timeout /= uSecDelay;  // convert to # loops
     char b[1];
     int i=0;
     do { 
         int n = read(fd, b, 1);  // read a char at a time
         if( n==-1) return -1;    // couldn't read
         if( n==0 ) {
-            usleep( 10 * 1000 ); // wait 10 msec try again
+            //usleep( 10 ); // wait 10 usec try again
             continue;
         }
         buf[i] = b[0]; i++;
-    } while( b[0] != until );
+    } while( b[0] != until && timeout-- > 0);
+    if( timeout <= 0 )
+      return -1;
 
-    buf[i] = 0;  // null terminate the string
+    buf[i] = '\0';  // null terminate the string
     return i;
 }
 
