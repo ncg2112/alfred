@@ -1,211 +1,219 @@
 /*
  * ReadTableFromSerial.cpp
+ * 
+ * Nathan Grubb, April 2013
  *
- * Nathan Grubb, March 2013
- * Serial Read/Write code derived from 
- *     http://www.tldp.org/HOWTO/Serial-Programming-HOWTO/x115.html
- *
- * This ROS node reads the USB serial port data coming from the sensor
- * pre-proccessor board.
- * It does some formatting and sanity checks, and publishes them as ROS topics
- *
+ * Reads the UART over USB messages from the PIC, and pulished
+ * the table status messages including ring direction status and
+ * table angle status 
  */
-
-#if 0
-// serial
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <termios.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <string>
-#include <unistd.h>
-#endif
-//serial
-#include "alfred_msg/SerialIO.h"
-
+   
 // ROS
-#include "ros/ros.h"
-#include "std_msgs/String.h"
-#include "alfred_msg/FSRDirection.h"
-#include "alfred_msg/FSRUpDown.h"
+#include <ros/ros.h>
+#include <alfred_msg/TableAngleStatus.h>
+#include <alfred_msg/FSRDirection.h>
 
 // CPP
-#include <sstream>
-#include <boost/regex.hpp>
-#include <boost/lexical_cast.hpp>
+#include <cmath>
 
-#define BAUDRATE B115200
+// serial
+#include <alfred_msg/SerialIO.h>
+
+//double encoderPosition_arduino[4];
+double xAccVal_PIC(0);
+double yAccVal_PIC(0);
+int upDown_PIC(0);
 
 
-#if 0
-struct termios oldtio;
-
-int serialport_init(const char* serialport, int baud);
-void serialport_close(int fd);
-int serialport_write(int fd, const char* msg);
-int serialport_read_until(int fd, char* buf, char until);
-
-#endif
-
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
-  /********************
-   * Set up ROS node
-   */
-  ros::init(argc, argv, "talker");
-  ros::NodeHandle n;
-  ros::Publisher tableDir_pub = n.advertise<alfred_msg::FSRDirection>("table_direction", 100);
-  ros::Publisher tableUpDown_pub = n.advertise<alfred_msg::FSRUpDown>("table_updown", 100);
-  alfred_msg::FSRDirection directionMessage;
-
-  // Set up serial connection
-  char buf[20];
-  char* modemDevice =  "/dev/ttyACM0";
-  if( argc > 1 )
-    modemDevice = argv[1];
-  int fd = serialport_init(modemDevice, BAUDRATE);  
-  if(fd < 0)  return -1;
-  usleep(3000 * 1000 ); 
-   
-  printf("Connected to Arduino, starting loop\n");
-  ros::Rate rate(50);
-  while(ros::ok())
-  {
-      // Get the X coordinate
-      serialport_write(fd, "x\0");
-      serialport_read_until(fd, buf, ':');
-      directionMessage.x = atof(buf);
-      //printf("Received X:%f\n", directionMessage.x); 
-      
-      // Get the Y coordinate
-      serialport_write(fd, "y");
-      serialport_read_until(fd, buf, ':');
-      directionMessage.y = atof(buf);
-      //printf("Received Y:%f\n", directionMessage.y); 
-
-      // Get the follow indicator
-      serialport_write(fd, "f");
-      serialport_read_until(fd, buf, ':');
-      directionMessage.followPressed = atof(buf) == 1;
-      //printf("Received F:%s\n", directionMessage.followPressed ? "true":"false" );
-
-      tableDir_pub.publish(directionMessage);
-      rate.sleep();
-  }
-}
-
-#if 0
-
-//===========================================
-// SERIAL COMMUNICATION FUNCTIONS
-//===========================================
-void serialport_close(int fd)
-{
-   // restore the old port settings
-   tcsetattr(fd,TCSANOW,&oldtio);
-   close(fd);
-}
-
-// takes the string name of the serial port (e.g. "/dev/tty.usbserial","COM1")
-// and a baud rate (bps) and connects to that port at that speed and 8N1.
-// opens the port in fully raw mode so you can send binary data.
-// returns valid fd, or -1 on error
-int serialport_init(const char* serialport, int baud)
-{
-    struct termios toptions;
-    int fd;
-    //fprintf(stderr,"init_serialport: opening port %s @ %d bps\n",
-    //        serialport,baud);
-    //fd = open(serialport, O_RDWR | O_NOCTTY | O_NDELAY);
-    fd = open(serialport, O_RDWR | O_NOCTTY);
-    if (fd == -1)  
-    {
-        perror("init_serialport: Unable to open port ");
-        return -1;
-    }
-    if (tcgetattr(fd, &toptions) < 0) 
-    {
-        perror("init_serialport: Couldn't get term attributes");
-        return -1;
-    }
-    tcgetattr(fd, &oldtio); // save current serial port setting
-    speed_t brate = baud; // let you override switch below if needed
-    switch(baud) 
-    {
-    case 4800:   brate=B4800;   break;
-    case 9600:   brate=B9600;   break;
-      // if you want these speeds, uncomment these and set #defines if Linux
-      //#ifndef OSNAME_LINUX
-      //    case 14400:  brate=B14400;  break;
-      //#endif
-    case 19200:  brate=B19200;  break;
-      //#ifndef OSNAME_LINUX
-      //    case 28800:  brate=B28800;  break;
-      //#endif
-      //case 28800:  brate=B28800;  break;
-    case 38400:  brate=B38400;  break;
-    case 57600:  brate=B57600;  break;
-    case 115200: brate=B115200; break;
-    }
-    cfsetispeed(&toptions, brate);
-    cfsetospeed(&toptions, brate);
-    // 8N1
-    toptions.c_cflag &= ~PARENB;
-    toptions.c_cflag &= ~CSTOPB;
-    toptions.c_cflag &= ~CSIZE;
-    toptions.c_cflag |= CS8;
-    // no flow control
-    toptions.c_cflag &= ~CRTSCTS;
-    toptions.c_cflag |= CREAD | CLOCAL;  // turn on READ & ignore ctrl lines
-    toptions.c_iflag &= ~(IXON | IXOFF | IXANY); // turn off s/w flow ctrl
-    toptions.c_lflag &= ~(ICANON | ECHO | ECHOE | ISIG); // make raw
-    toptions.c_oflag &= ~OPOST; // make raw
-
-    // see: http://unixwiz.net/techtips/termios-vmin-vtime.html
-    toptions.c_cc[VMIN]  = 0;
-    toptions.c_cc[VTIME] = 20;
-
-    if( tcsetattr(fd, TCSANOW, &toptions) < 0) 
-    {
-        perror("init_serialport: Couldn't set term attributes");
-        return -1;
-    }
+   /********************** 
+    * Table Read Status Params
+    * 
+    * 
+    * BAUDRATE          baudrate from PIC 
+    * SERIAL_DEV        the default dev file pointing to the PIC
+    * 
+    * INITIAL_TIMEOUT   timeout to hear beginning of message after request
+    * CHAR_TIMEOUT      timeout after the message starts for each char
+    */ 
  
-    return fd;
+   int BAUDRATE = B115200;
+   char* SERIAL_DEV = "/dev/pic";
+
+   double LOOP_RATE = 100.0;
+   double UPDATE_PIC_TIMEOUT = 0.25;
+
+   char REQUEST_CHAR = '$';
+   char BEGIN_MSG_CHAR = '`';
+   char DELIM_CHAR = ';';
+
+   // usec
+   double INITIAL_TIMEOUT = 200;
+   double CHAR_TIMEOUT = 40;
+
+   /******** ROS Setup *********/
+   ros::init(argc, argv, "ReadTableFromSerial");
+   ros::NodeHandle node;
+  
+   ROS_INFO( "Starting Publisher" );
+   ros::Publisher angle_pub = node.advertise<alfred_msg::TableAngleStatus>("TableAngleStatus", 2);
+   ros::Publisher dir_pub = node.advertise<alfred_msg::FSRDirection>("FSRDirection", 2);
+   
+
+   std::string debug("d");
+   bool DEBUG = ( argc > 2 && debug.compare(argv[2]) == 0 );
+   if(DEBUG)
+      ROS_INFO("Printing all from serial debug");
+
+   /******** Start Serial *********/
+   char* serialDevice = SERIAL_DEV;
+   if( argc > 1 )
+      serialDevice = argv[1];
+
+   int fd = serialport_init(serialDevice, BAUDRATE);
+   if(fd < 0){
+      ROS_ERROR( "Could not open serial device \'%s\'\n", serialDevice); 
+      return -1;
+   }
+   usleep( 3000 * 1000 );
+
+   /******** Loop variables Setup *********/
+   ros::Rate rate(LOOP_RATE);
+   int maxNumLoopsWithoutOrder = (int)( UPDATE_PIC_TIMEOUT * LOOP_RATE );
+   int numLoopsWithoutOrder(-1);
+   bool receivedStatusUpdate(false);
+  
+   while(node.ok()){
+
+      // If we haven't yet started
+      if( numLoopsWithoutOrder == -1){
+         // do anything here?
+      }
+      // Safety Check 1 : time without orders
+      else if( numLoopsWithoutOrder >= maxNumLoopsWithoutOrder ){
+         // do anything here?
+         ROS_ERROR( "ERROR Table Serial Status hasn't received a message from the PIC in %f mS!", 1000 * UPDATE_PIC_TIMEOUT );
+      }
+
+      // Safety check passed, continue
+    
+      if( numLoopsWithoutOrder >= 0 ) 
+         numLoopsWithoutOrder++;
+      if( receivedStatusUpdate == true ){
+         numLoopsWithoutOrder = 0;
+         receivedStatusUpdate = false;
+      }
+
+      if( DEBUG ){
+         char b[1];
+         int n = read(fd, b, 1);
+         if( n != 0 )
+            printf("%c", b[0]);
+         continue;
+      }
+
+
+      // Request the status
+      ROS_INFO("Sending Query");
+      std::stringstream ss;
+      ss << REQUEST_CHAR;
+      std::string msg = ss.str();
+      int isok = serialport_write(fd,msg.c_str());  
+     
+      if( isok <= 0 ){
+         ROS_WARN("ERROR: Requesting Table Status from PIC, write returned %d", isok);
+         continue;
+      }
+   
+      // Now, read the table status
+      // Message Format is `%d;%d;%d;%d;%d;%d;%d;%d;%d;
+      //                    dX dY RT UD aX aY aZ S  F   
+
+      int numItems = 9;
+      char buf[numItems][128];
+     
+      char b[1]; 
+      isok = serialport_read_until(fd, b, BEGIN_MSG_CHAR, INITIAL_TIMEOUT);
+      if( isok <= 0 ){
+         ROS_ERROR("ERROR: Timeout on response from PIC!");
+         continue;
+      }
+      ROS_INFO("Got start char");
+      bool isGoodRead(true);
+      for(int i(0); i < numItems; i++ ){
+         isok = serialport_read_until(fd, buf[i], DELIM_CHAR, CHAR_TIMEOUT);
+         ROS_INFO("Read in \'%s\'", buf[i]);
+         if( isok <= 0 ){
+            ROS_WARN("ERROR: PIC Timeout halted mid-response or incorrect format");
+            isGoodRead = false;
+         }
+      }
+      if( ! isGoodRead ){
+         ROS_ERROR("ERROR: Could not read status from PIC");
+         continue;
+      }
+
+      receivedStatusUpdate = true;
+
+      double fsrDir[2];
+      for( int i(0); i < 2; i++ ){
+         int rawFsr = std::atoi(buf[i]);
+
+         // now process, turn from scale 0-255 to a percent from -1 to 1
+         fsrDir[i] = (double)rawFsr / 128;      
+
+         ROS_INFO("FSR Direction %d : %f", i, fsrDir[i]);
+      } 
+      
+      double acc[2];
+      for( int i(0); i < 3; i++ ){
+         ROS_INFO("acc %d raw is \'%s\'", i, buf[i+4] );
+         int rawAcc = std::atoi(buf[i+4]);
+         acc[i] = (double)rawAcc;
+         ROS_INFO("Accelerator %d : %f", i, acc[i]);
+      } 
+
+      double speed = (double)(std::atoi(buf[7])) / 255.0;
+      ROS_INFO("Speed : %f", speed);
+
+      ROS_INFO("Rotate string is \'%s\'", buf[2]);
+      int rotate = std::atoi(buf[2]);
+      ROS_INFO("Rotate : %d", rotate);
+
+      ROS_INFO("UpDown string is \'%s\'", buf[3]);
+      int upDown = std::atoi(buf[3]);
+      ROS_INFO("UpDown : %d", upDown);
+      
+      int follow = std::atoi(buf[8]);
+      ROS_INFO("Follow : %d", follow);
+
+
+      // now populate the FSR Direction message
+
+      alfred_msg::FSRDirection dirMsg;
+
+      dirMsg.x = fsrDir[0]; 
+      dirMsg.y = fsrDir[1];
+      dirMsg.speed = speed;
+      dirMsg.rotate = rotate;
+      dirMsg.follow = follow == 1;
+
+      // now populate the angle status message
+   
+      alfred_msg::TableAngleStatus angleMsg;
+      
+      angleMsg.xAcc = acc[0];
+      angleMsg.yAcc = acc[1];
+      angleMsg.zAcc = acc[2];
+      angleMsg.upDown = upDown;
+
+      dir_pub.publish(dirMsg); 
+      angle_pub.publish(angleMsg);
+
+      ROS_INFO("\n");
+      rate.sleep();
+      ros::spinOnce();
+   }
+   return 0;
 }
-
-
-int serialport_read_until(int fd, char* buf, char until)
-
-{
-    char b[1];
-    int i=0;
-    do 
-    { 
-        int n = read(fd, b, 1);  // read a char at a time
-        if( n==-1) return -1;    // couldn't read
-        if( n==0 ) 
-	     {
-            usleep( 10 * 1000 ); // wait 10 msec try again
-            continue;
-        }
-        buf[i] = b[0]; 
-	 i++;
-    } while( b[0] != until );
-    buf[i-1] = 0;  // null terminate the string
-    return i-1;
-}
-
-int serialport_write(int fd, const char* msg)
-{
-    char send[255];
-    int n = sprintf( send, msg );
-    int written = write( fd, send, n );
-    //printf( "I wrote %s (%i) \t", msg, written);
-    return written;
-}
-
-#endif

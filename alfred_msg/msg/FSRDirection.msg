@@ -3,4 +3,6 @@
 
 float32 x
 float32 y
-bool followPressed
+float32 speed
+int32 rotate
+bool follow

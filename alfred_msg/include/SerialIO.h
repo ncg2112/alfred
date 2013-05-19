@@ -77,20 +77,21 @@ int serialport_read_until(int fd, char* buf, char until, int timeout)
 {
     // delay to wait if we don't see a char immediately
     int uSecDelay(10);
-    timeout /= uSecDelay;  // convert to # loops
+    //timeout;  // convert to # loops
     char b[1];
     int i=0;
-    do { 
+    do {
         int n = read(fd, b, 1);  // read a char at a time
         if( n==-1) return -1;    // couldn't read
         if( n==0 ) {
-            //usleep( 10 ); // wait 10 usec try again
+            usleep( 10 ); // wait 10 usec try again
             continue;
         }
         buf[i] = b[0]; i++;
-    } while( b[0] != until && timeout-- > 0);
-    if( timeout <= 0 )
+    } while( b[0] != until && --timeout > 0);
+    if( timeout <= 0 ){
       return -1;
+   }
 
     buf[i] = '\0';  // null terminate the string
     return i;
@@ -108,7 +109,7 @@ int serialport_init(const char* serialport, int baud)
     struct termios toptions;
     int fd;
     
-    //fd = open(serialport, O_RDWR | O_NOCTTY | O_NDELAY);
+   // fd = open(serialport, O_RDWR | O_NOCTTY | O_NDELAY);
     fd = open(serialport, O_RDWR | O_NOCTTY);
 
     if (fd == -1)  {
@@ -137,6 +138,7 @@ int serialport_init(const char* serialport, int baud)
     cfsetispeed(&toptions, brate);
     cfsetospeed(&toptions, brate);
 
+    
     // 8N1
     toptions.c_cflag &= ~PARENB;
     toptions.c_cflag &= ~CSTOPB;

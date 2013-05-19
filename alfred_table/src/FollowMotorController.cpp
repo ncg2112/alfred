@@ -1,14 +1,11 @@
 /*
- * FollowMotorController
  * 
- * Nathan Grubb
- * April 2013
  *
- */
+*/
    
 // ROS
 #include <ros/ros.h>
-#include <alfred_msg/FollowCommand.h>
+#include <alfred_msg/DriveBase.h>
 #include <tf/transform_listener.h>
 #include <tf/tf.h>
 
@@ -29,19 +26,19 @@ int main(int argc, char **argv)
     *   Clockwise is forward as are the motor numbers, starting at the front
     *   right
     */ 
-   double FORWARD_SPEED = 1;
-   double ANGULAR_SPEED = 3;
-   double REVERSE_ANGULAR_SPEED = -3;
+   double FORWARD_SPEED = 25;
+   double ANGULAR_SPEED = 10;
+   double REVERSE_ANGULAR_SPEED = -10;
 
    double FAR_THRESHOLD = 1.5;
    double SIDE_THRESHOLD = .3;
   
-   double THETA_M1 = 60.0;            // In degrees
-   double THETA_M2 = -60.0;
+   double THETA_M1 = -45.0;            // In degrees
+   double THETA_M2 = 45.0;
    double THETA_M3 = 180.0;
 
    double MAX_ACCELERATION = 8;      // In % per second
-   double LOOP_RATE = 30.0;            // In Hz
+   double LOOP_RATE = 10.0;            // In Hz
    double MAX_ACC_PER_LOOP = MAX_ACCELERATION / LOOP_RATE;
 
 
@@ -54,7 +51,7 @@ int main(int argc, char **argv)
    ros::init(argc, argv, "listenerTf");
    ros::NodeHandle node;
   
-   ros::Publisher drive_pub = node.advertise<alfred_msg::FollowCommand>("FollowCommand", 2);
+   ros::Publisher drive_pub = node.advertise<alfred_msg::DriveBase>("DriveBase", 2);
  
    tf::TransformListener listener;
    ros::Rate rate(10.0);
@@ -160,16 +157,15 @@ int main(int argc, char **argv)
 
       // First we project the speed forward onto each wheel, this is
       //   simply a projection of the foward onto the wheel vector
-      targetM1 = (sinM1 * speed * -1);
-      targetM2 = (sinM2 * speed * -1);
+      targetM1 = (sinM1 * speed);
+      targetM2 = (sinM2 * speed);
       targetM3 = (sinM3 * speed);
      
       // now add the rotation
       targetM1 = targetM1 - angularSpeed; 
       targetM2 = targetM2 - angularSpeed; 
       targetM3 = targetM3 - angularSpeed; 
-     
-      /* 
+      
       // now we go from the target velocity to the current velocity
       //  This is just a ramp function
       double diff1 = targetM1 - motor1;
@@ -183,16 +179,11 @@ int main(int argc, char **argv)
       motor1 = motor1 + diff1;
       motor2 = motor2 + diff2;
       motor3 = motor3 + diff3;
-      */
 
-      motor1 = targetM1;
-      motor2 = targetM2;
-      motor3 = targetM3;
-      
       ROS_INFO( "Target Motor Order: [%f, %f, %f]", targetM1, targetM2, targetM3);
       ROS_INFO( "Publishing Motor Order: [%f, %f, %f]", motor1, motor2, motor3 );
  
-      alfred_msg::FollowCommand msg;
+      alfred_msg::DriveBase msg;
       msg.motor1 = motor1;
       msg.motor2 = motor2;
       msg.motor3 = motor3;

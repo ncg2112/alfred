@@ -31,5 +31,7 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
 #rosbuild_add_executable( ReadTableFromSerial src/ReadTableFromSerial.cpp)
 rosbuild_add_executable( TableMotorToSerial src/TableMotorToSerial.cpp) 
+rosbuild_add_executable( AngleToTablePosition src/AngleToTablePosition.cpp) 
 rosbuild_add_executable( TableEncoderPID src/PID_v1.cpp src/TableEncoderPID.cpp)
+rosbuild_add_executable(ReadTableFromSerial src/ReadTableFromSerial.cpp)
 
