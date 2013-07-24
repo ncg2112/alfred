@@ -1,0 +1,3613 @@
+%!PS-Adobe-3.0
+%%Creator: Wine PostScript Driver
+%%Title: Visio-ROSNodes.vsd
+%%BoundingBox: 18 18 576 823
+%%Pages: (atend)
+%%EndComments
+%%BeginProlog
+/tmpmtrx matrix def
+/hatch {
+  pathbbox
+  /b exch def /r exch def /t exch def /l exch def /gap 32 def
+  l cvi gap idiv gap mul
+  gap
+  r cvi gap idiv gap mul
+  {t moveto 0 b t sub rlineto}
+  for
+} bind def
+/B {pop pop pop pop} def
+/N {newpath} def
+/havetype42gdir {version cvi 2015 ge} bind def
+%%EndProlog
+%%BeginSetup
+mark {
+%%BeginFeature: *PageSize A4
+<</PageSize[595 842]/ImagingBBox null>>setpagedevice
+%%EndFeature
+} stopped cleartomark
+mark {
+%%BeginFeature: *Duplex None
+<</Duplex false>>setpagedevice
+%%EndFeature
+} stopped cleartomark
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+/pgsave save def
+72 300 div 72 300 div scale
+75 75 translate
+1 -1 scale
+-90 rotate
+%%EndPageSetup
+%%BeginDocument: Wine passthrough
+/languagelevel where {pop languagelevel} {1} ifelse
+2 ge dup {currentglobal exch true setglobal globaldict} {userdict} ifelse
+/GpPBeg1 {
+    gsave initclip
+    16 dict begin
+    /c {curveto} def /l {lineto} def /m {moveto} def
+    /rc {rcurveto} def /rl {rlineto} def
+    /NP {newpath} def /CP {closepath} def /SC {setrgbcolor} def
+    /GSE {end grestore} def
+} put
+{setglobal} if
+GpPBeg1
+0.8196 0.9215 0.9450 SC
+NP 8 811 m 516 811 l 516 1058 l 8 1058 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 8 1058 m 516 1058 l 516 811 l 8 811 l 8 1058 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+25 dict begin
+ /FontName /Tahoma def
+ /Encoding 256 array 0 1 255{1 index exch /.notdef put} for def
+ /PaintType 0 def
+ /FontMatrix [1 2048 div 0 0 1 2048 div 0 0] def
+ /FontBBox [-1236 -424 2741 2118] def
+ /FontType 1 def
+ /Private 7 dict begin
+  /RD {string currentfile exch readhexstring pop} def
+  /ND {def} def
+  /NP {put} def
+  /MinFeature {16 16} def
+  /BlueValues [] def
+  /password 5839 def
+  /lenIV -1 def
+ currentdict end def
+ currentdict dup /Private get begin
+  /CharStrings 256 dict begin
+   /.notdef 4 RD 8b8b0d0e ND
+  currentdict end put
+ end
+currentdict end dup /FontName get exch definefont pop
+/Tahoma findfont
+[42 0 0 -42 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+40 927 moveto
+%%glyph 0035
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0035 165 RD
+f72bff000004f70dff000004818b15fb
+958b05fc6cf8e405fb768b058bfce405
+fb5a8b058bff000005d105f8148b05e0
+8bd386c58208c482c275bf6908bf6ab4
+60aa5608a9569a4a8b3d088bfb016f2f
+54420854423f542c680809f1f83a158b
+b683b27cad087cac73a76ba0086f9e6a
+9866930866925c8f548b08fb588b058b
+fcc605f7428b05c48bbe90b89508b895
+b2a0abaa08a8a7a0ac99b20898b292b8
+8bbf08090e
+ND
+end end
+/g0035 glyphshow
+66 927 moveto
+%%glyph 0048
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0048 223 RD
+c6faca0df8c67115fb468cfb1ebc29f0
+0828ef5af7228bf74d088bf74abbf725
+eaf70008eaf6f711c1f72e8b08d08bc9
+81c07708c077ba6cb36008b360aa57a0
+4e08a04d963f8b32088b2505fd9a8b05
+8bfb16ac28cc4608cc46e669f7078b08
+b48bb490b39408b294af97ab9a08ad9a
+a89aa29a08a2999f989a9808968b058b
+fb6105758270816a7e086a7e6e807184
+0866826a836e86086d8665885e8a0809
+f770f959158abe85b680b00880b07caa
+77a40875a76fa0699a08689a6192588b
+08598b6184687c08687c6b756e6e086f
+6e766a7c68087c678261875c08090e
+ND
+end end
+/g0048 glyphshow
+88 927 moveto
+%%glyph 0044
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0044 262 RD
+c5fac70df952f7a7158bf7ca055e8753
+8647840846845481617e08597c62736a
+6c086a6b7b5f8b52088b4b9d5baf6a08
+af6ac07bd08b08c68bc198bba508bba4
+b8abb5b008098bfb30157c80767b7277
+087176727b737f086a7a6b7e6c82086c
+825f86538a085d8c5f94629c08629c66
+a36caa086daa73b179b80879b882ba8b
+bd088bd89bcdacc208acc1beb6d2ab08
+caa8d59fe09608e096e793ee90088baf
+058bb784af7ea6087ea6789f739a0873
+9a6e966890086890688d668b08608b58
+85507e08507e5178507208808b058bf7
+5305ae95bc96cc9708cc97cb91ca8b08
+d88bcb85c07f08c07fba75b56c08b46c
+a9649f5a089f5a95508b45088bfd9005
+fb4f8b05090e
+ND
+end end
+/g0044 glyphshow
+110 927 moveto
+%%glyph 0047
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0047 198 RD
+c6ff0000046c0dfa3d8b15fb508b058b
+f706056e727177767b08767b727c6e7e
+08707f70816e84086e846a88658a084e
+8c539758a40857a45fb067bc0866bc6f
+c877d40877d381de8be9088bed98e0a4
+d308a4d2aecab8c008b4bcbcb1c5a708
+c4a6c899ca8b08c38bbc85b47f08b47e
+b778b971088bf87805f7508b0509fb50
+fffffffafc158bf918055ca2629a6694
+086694628f608b082a8b406754430854
+4270238bfb1d088bfb17a026b54608b5
+45ce68e88b08bc8bbd96bda208bda1ba
+a9b7b108090e
+ND
+end end
+/g0047 glyphshow
+133 927 moveto
+%%glyph 0033
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0033 164 RD
+f72bfafd0dfa40faa4158b4a804e7452
+0874516b5a62620858584e6546710846
+71337e218b08fb3c8b058bfcbf05fb5a
+8b058bff000005d105f80a8b05e38bd6
+84c97c08c97cc274ba6a08c265b75baa
+5108aa509b458b380809fb6286158bbe
+82b87ab10879b170aa67a3086ca06699
+6294086194578f4d8b08fb388b058bfc
+e705f71b8b05db8bcc92bc9808bc98b4
+a2acac08a8a9a1ac98ae0898ae92b58b
+ba08090e
+ND
+end end
+/g0033 glyphshow
+156 927 moveto
+%%glyph 004f
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g004f 26 RD
+f720f8680df7508b15fb508b058bff00
+00061405f7508b05090e
+ND
+end end
+/g004f glyphshow
+166 927 moveto
+/g0044 glyphshow
+187 927 moveto
+%%glyph 0057
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0057 132 RD
+a0f9410df8597515248c3ba752c60852
+c56ee78bf712088bf8ff05fb138b058b
+f73005f7138b058bf7d505f7508b058b
+fbd505f7ee8b058bfb3005fbee8b058b
+fca7058b528c608d6c088d6c936f9870
+0896749e79a48008a47fae85b68b08aa
+8ba890a89408a8949f92989108968b05
+8bfb3d056881678467850866866a886c
+8a08090e
+ND
+end end
+/g0057 glyphshow
+201 927 moveto
+%%glyph 0049
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0049 117 RD
+a8f9200df94bff0000056015818b057a
+9173916c91086c906f8e728b083c8b52
+796a680869677a4a8b2e088b6505f7cb
+8b058bfb3005fbc58b058bfe5505fb50
+8b058bfa5505fb138b058bf73005f713
+8b058bb0058bf71babf1ccd108ccd1e7
+aef70d8b08ae8bad89ac8808ac87aa87
+a68608090e
+ND
+end end
+/g0049 glyphshow
+215 927 moveto
+%%glyph 0052
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0052 148 RD
+c4faec0dfa7af8c2158bfb505efb2530
+25083024fb0c59fb2b8a08fb2f8cfb0e
+bf32f50832f45ef7248bf749088bf74f
+b9f725e7f208e6f2f70dbff72a8b08f7
+2b8bf70c58e62408e624b8fb268bfb4f
+0809fb568b158bf72571f656d20856d1
+40ae2a8b08298b406856450856447020
+8bfb25088bfb20a621c04308c042d667
+ed8b08ec8bd6afc0d208c0d2a5f58bf7
+2308090e
+ND
+end end
+/g0052 glyphshow
+237 927 moveto
+%%glyph 0055
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0055 91 RD
+f71cf9760df8e4fa2715818b057d8f7c
+8e7c8c087b8c788b758b08588b598059
+750859755c6a5e60088bfdad05fb508b
+058bfaf105f7508b058bfb3a05d0c8c7
+b6bea408bea4bc97bb8b089e8b9a8b95
+8a08948a9689978908090e
+ND
+end end
+/g0055 glyphshow
+252 927 moveto
+%%glyph 0050
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0050 225 RD
+f71cff000006b80dff000004f48b158b
+f91a058bbe89bb87b70887b683ad7ea4
+087ea6789e72980872986a91618b0864
+8b627f5f74085e735d695c5e088c808c
+7d8c7c088c7b8b788b76088bfd7305fb
+508b058bf91a058bbe89bb87b70887b6
+83ad7ea4087ea6789e72980872986a91
+618b08628b617e5e72085e72606a6164
+088bfdd605fb508b058bfaf105f7508b
+058bfb1005bcbcbcb2bca608bba6c098
+c58b08cd8bc67cbe6d08be6db15aa646
+08c4cac2bbc1ac08c1acc69bca8b08bb
+8bb784b27c08b27cae72a86a08a969a2
+619c58089b58934c8b3e088bfd730509
+0e
+ND
+end end
+/g0050 glyphshow
+287 927 moveto
+%%glyph 0029
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0029 54 RD
+f72bfac00dfa0fff0000052115fd498b
+058bfc3805f92c8b058bfb4405fd2c8b
+058bfd6105fb5a8b058bff000005d105
+fa0f8b05090e
+ND
+end end
+/g0029 glyphshow
+309 927 moveto
+/g0055 glyphshow
+324 927 moveto
+/g0052 glyphshow
+347 927 moveto
+/g0050 glyphshow
+382 927 moveto
+%%glyph 0036
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0036 256 RD
+d8ff000004750df87d7015fb008c2f96
+40a1083fa144a648ac088bf78c05998b
+05cc4ed55bde6a08de69da7ad88b08f7
+018bdea2c3b908c3b8a7c78bd6088bc6
+7cbc6eb0086eb05ca74b9d085d986196
+65940865945b96529a0858985d9c62a0
+0862a067a66cac086cac74b17ab8087a
+b782be8bc5088bf70dbaf0e9dd08e9dc
+f70cb4f7268b08de8bda83d67a08d57a
+d074ca6c088bfb81057c8b055cb64eb1
+41ac0841ab3d9b3a8b082f8b41765260
+0852606f528b45088b4c9c58ac6608ac
+66bc6fca7a08b580be7ec87d08c87cbd
+7eb37f08f26cd65bba4c08ba4ca33d8b
+2e088b517f5274520873526a5b606408
+5b6055694f74084e744080308a08090e
+ND
+end end
+/g0036 glyphshow
+405 927 moveto
+/g0048 glyphshow
+427 927 moveto
+/g0055 glyphshow
+442 927 moveto
+%%glyph 004c
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g004c 40 RD
+f713f8680df75d8b15fb508b058bfaf1
+05f7508b050998f74f15fb6a8b058bf7
+5705f76a8b05090e
+ND
+end end
+/g004c glyphshow
+451 927 moveto
+/g0044 glyphshow
+473 927 moveto
+/g004f glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+162 969 moveto
+%%glyph 000b
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g000b 123 RD
+f700f9a40df8eefc3015fb798b05fb08
+f71f30f72649f72d0848f72e6af74a8b
+f766088bf761acf749cdf73108ccf730
+e7f727f709f71e08f7798b058b810555
+5a58535a4c085a4b5d4161360863396b
+3172280872287e238bfb01088bfb0697
+23a42c08a32cac31b43608b33ab941be
+4808be49bf53be5c08090e
+ND
+end end
+/g000b glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+174 969 moveto
+/g0044 glyphshow
+192 969 moveto
+/g004f glyphshow
+200 969 moveto
+/g0049 glyphshow
+210 969 moveto
+/g0055 glyphshow
+222 969 moveto
+/g0048 glyphshow
+240 969 moveto
+/g0047 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+258 969 moveto
+%%glyph 0042
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0042 32 RD
+7bfaf20dff0000047efbc015fffffffb
+828b058bf71605ff0000047e8b05090e
+ND
+end end
+/g0042 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+276 969 moveto
+/g0057 glyphshow
+288 969 moveto
+/g0044 glyphshow
+305 969 moveto
+%%glyph 0045
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0045 169 RD
+f71cff0000046c0df97bf8c6158bf719
+77f162d00862d04aad318b08588b577f
+57730856735c6d6066088bfd1405ba74
+b57ab08208b081b386b78b08eb8bd6ad
+c2cf08c2cfa6f68bf7270809f7569a15
+8bfb4b5ffb2732fb030832fb03fb0354
+fb198a084e8c5892609a08609a609f61
+a4087f5705fb448b058bff0000061405
+f7508b058bfcc005bab6bfaec2a708c2
+a7ca99d18b08f7128bee59d42608d426
+affb208bfb4708090e
+ND
+end end
+/g0045 glyphshow
+323 969 moveto
+/g004f glyphshow
+331 969 moveto
+/g0048 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+349 969 moveto
+%%glyph 000c
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g000c 125 RD
+d5f9a40df8eef8d0158bfb626afb4949
+fb300849fb2f30fb27fb09fb1f08fb79
+8b058b9505bebabfc3bfce08bfceb8d5
+b2db08b4e1ace6a4eb08a3ea97f38bf7
+03088bf7027ff372ed0872ed6be562de
+0862de5dd558cd0858cd58c358b9088b
+9505f7798b05f708fb1ee6fb27cefb2f
+08cdfb2facfb4a8bfb6308090e
+ND
+end end
+/g000c glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.8196 0.9215 0.9450 SC
+NP 1401 1368 m 1909 1368 l 1909 1614 l 1401 1614 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1401 1614 m 1909 1614 l 1909 1368 l 1401 1368 l 1401 1614 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[42 0 0 -42 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+1469 1483 moveto
+%%glyph 0025
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0025 264 RD
+f72bff000004b70dfa86f85d158b417d
+4a6f52086f52655d5c6608535f4f6c4b
+79084b783882268b08fc3f8b058bff00
+0005d105f81f8b05f58bdb88c08408c0
+84bd7abc7108c06eb266a45d08a45c97
+558b4c088b45794c6654086654575f4a
+6c088b8305e473cf5fbc4c08bc4ba33b
+8b2c0809fba8f930158baf85aa7fa608
+7fa578a0709a086b9d6796648f08648f
+548d468b08fb528b058bfc4805f7758b
+05c98bb98ea89208a891aa98aa9f08a9
+9ea0a598aa0898aa91b28bb90809d1fd
+38158bc383b97bb0087baf6baa5aa408
+6c9c69956690086690568d478b08fb75
+8b058bfcba05f7358b05e28bcf8fbd93
+08bd93b79cb1a508b0a5a7a99cac089c
+ac94b58bc008090e
+ND
+end end
+/g0025 glyphshow
+1494 1483 moveto
+/g0044 glyphshow
+1515 1483 moveto
+%%glyph 0056
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0056 263 RD
+cefa260df8077015408c46954a9e084a
+9f55a060a2088bf76705958b059b7e9e
+7da17c08a07ca87baf7a08ab7cae7eb2
+8008b180b385b48b08a98bab8fad9208
+ad92a4939c9608a29a9c9c969c08959c
+90a58bae088bb87fac73a20872a2609e
+4d9a0873916c92649308649368946a94
+0836a44db164bf0864be78ca8bd4088b
+f0b1ddd7ca08d7caf0abf7128b08c98b
+c983ca7c08ca7cbf77b674088bfb5d05
+818b055bb156a950a10850a14f964f8b
+084d8b577e607108607176648b56088b
+5c9869a47408a474b478c37c08a784aa
+84ae8408ad84af82b18208de76c969b5
+5b08b45ba04a8b38088b5b825e786008
+78606f66666c08636a5e72597a08587a
+4c823f8a08090e
+ND
+end end
+/g0056 glyphshow
+1534 1483 moveto
+/g0048 glyphshow
+1556 1483 moveto
+%%glyph 0030
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0030 78 RD
+f72bff0000062a0dff000004fc8b15fb
+5a8b058bff0000050305fc18fdfd05fb
+0c8b05fc15f9fd058bfffffffafd05fb
+4d8b058bff000005d105f7a28b05f808
+fdd105f7fbf9d105f7a78b05090e
+ND
+end end
+/g0030 glyphshow
+1588 1483 moveto
+/g0052 glyphshow
+1611 1483 moveto
+/g0057 glyphshow
+1625 1483 moveto
+/g0052 glyphshow
+1647 1483 moveto
+/g0055 glyphshow
+1662 1483 moveto
+%%glyph 0026
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0026 255 RD
+cdff000004ce0df92f70152a8c319b3a
+ab0839ac44bb50cc0850cc5ddb6aec08
+6aec7bf7038bf711088bf7119bf700ab
+e808aae8b9dbc8d008c6ced2bedcae08
+dcaee69cf08b08bd8bba87b78408b684
+b481b08008ab81ac7fad7c08ac7cac7a
+ac79088bfb83057b8b057a9b749e70a2
+0870a269a164a10865a0629c5e98085e
+985892508b084c8b4f7e52710852715a
+6560580861586a4c743e08743e7f358b
+2b088b259733a44208a441ac4db65808
+b45abc66c37208c372c67eca8b08c48b
+c092bc9908bc99b69db1a008b0a0aaa0
+a6a108a6a0a09e9a9a089a8b058bfb80
+056a7c6d7c6e7d086e7d677d627e0860
+7d638166840866845a87508a08090e
+ND
+end end
+/g0026 glyphshow
+1687 1483 moveto
+/g0052 glyphshow
+1710 1483 moveto
+%%glyph 0051
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0051 114 RD
+f71cff000004760dfa028b15fb508b05
+8bf910058bbe89bb86b80886b781ae7d
+a6087ca775a0709908709865925c8b08
+5c8b5b7f5a720859725a6a5c63088bfd
+d605fb508b058bfaf105f7508b058bfb
+1005c3bdc2b1c2a608c2a6c498c88b08
+f7028be167c94308c942aa228bfb1d08
+090e
+ND
+end end
+/g0051 glyphshow
+1733 1483 moveto
+/g0057 glyphshow
+1747 1483 moveto
+/g0055 glyphshow
+1762 1483 moveto
+/g0052 glyphshow
+1785 1483 moveto
+/g004f glyphshow
+1794 1483 moveto
+/g004f glyphshow
+1804 1483 moveto
+/g0048 glyphshow
+1826 1483 moveto
+/g0055 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+1555 1525 moveto
+/g000b glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+1568 1525 moveto
+/g0044 glyphshow
+1585 1525 moveto
+/g004f glyphshow
+1593 1525 moveto
+/g0049 glyphshow
+1604 1525 moveto
+/g0055 glyphshow
+1616 1525 moveto
+/g0048 glyphshow
+1633 1525 moveto
+/g0047 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+1652 1525 moveto
+/g0042 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+1670 1525 moveto
+/g0047 glyphshow
+1688 1525 moveto
+/g0055 glyphshow
+1700 1525 moveto
+/g004c glyphshow
+1708 1525 moveto
+%%glyph 0059
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0059 39 RD
+91fa900dfa84faf115fc39fef105fb3d
+8b05fc36faf105f75f8b05f7c6fdf205
+f7c3f9f205090e
+ND
+end end
+/g0059 glyphshow
+1724 1525 moveto
+/g0048 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+1742 1525 moveto
+/g000c glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.8196 0.9215 0.9450 SC
+NP 1998 823 m 2506 823 l 2506 1070 l 1998 1070 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1998 1070 m 2506 1070 l 2506 823 l 1998 823 l 1998 1070 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[42 0 0 -42 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2061 939 moveto
+%%glyph 0032
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0032 237 RD
+cdff000005a90dff00000472ff000005
+2615c44ab73aaa2a08aa2a9bfb028bfb
+10088bfb0d7cfb016c2a086c2a5f3951
+49084e4645583a6a083a6a317b2a8a08
+268c319c3aac083aad46be51ce0852cd
+5fdc6cec086cec7cf7018bf70e088bf7
+119bf702aaea08aaeab7dcc4cf08c4cd
+d1bddcae08dcade59cef8b08f08be779
+dc6808dc68d059c34b080970fcd2158b
+ee80e276d70876d76dca64bd0864be5b
+b254a50853a44c98468b08438b4c7f56
+720855725b6462560864586d4c763e08
+763e80358b2a088bfb57b4fb2add2408
+dd23f70257f71e8b08f71e8bf702bfdd
+f308dcf2b4f72a8bf75708090e
+ND
+end end
+/g0032 glyphshow
+2090 939 moveto
+%%glyph 0058
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0058 126 RD
+f714ff000004760dfa028b15fb508b05
+8bf71005515854655771085771517e4b
+8a085a8c5e93609b08609a65a46bae08
+6bae72b67ac00879c082cb8bd6088bf9
+6905f7508b058bfd10058b508d5a9064
+088f6495689a6e089a6ea076a67e08a5
+7eb184bc8b08b98bbc98bfa508bfa5bb
+abb6b1088bf9d605f7508b05090e
+ND
+end end
+/g0058 glyphshow
+2113 939 moveto
+/g0057 glyphshow
+2127 939 moveto
+%%glyph 0053
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0053 170 RD
+f71cff0000046c0dfa3df8e0158bfb4e
+5ffb2832fb020832fb03fb0555fb1c8a
+08548c5a916098086097609e5ea6088b
+fc6805fb508b058bff000005f905f750
+8b058bfb0905bab5bfaec4a808c4a7c9
+99ce8b08f7148bef58d32608d226affb
+1c8bfb3f0809fb5676158bf71377ee62
+d20862d149ae308b08568b577f5a7408
+59735c6c5e66088bfd0d05bc73b67bae
+8208ae82b387b88b08ec8bd7afc1d208
+c1d2a6f48bf71d08090e
+ND
+end end
+/g0053 glyphshow
+2150 939 moveto
+/g0058 glyphshow
+2174 939 moveto
+/g0057 glyphshow
+2187 939 moveto
+/g0030 glyphshow
+2220 939 moveto
+/g0052 glyphshow
+2242 939 moveto
+/g0057 glyphshow
+2256 939 moveto
+/g0052 glyphshow
+2279 939 moveto
+/g0055 glyphshow
+2294 939 moveto
+%%glyph 0037
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0037 50 RD
+8aff000004ac0df8888b158bff000005
+2105fc888b058bf74405ff000004ae8b
+058bfb4405fc888b058bfffffffadf05
+090e
+ND
+end end
+/g0037 glyphshow
+2318 939 moveto
+/g0052 glyphshow
+2341 939 moveto
+/g0036 glyphshow
+2364 939 moveto
+/g0048 glyphshow
+2386 939 moveto
+/g0055 glyphshow
+2401 939 moveto
+/g004c glyphshow
+2410 939 moveto
+/g0044 glyphshow
+2432 939 moveto
+/g004f glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2151 981 moveto
+/g000b glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2164 981 moveto
+/g0044 glyphshow
+2182 981 moveto
+/g004f glyphshow
+2189 981 moveto
+/g0049 glyphshow
+2200 981 moveto
+/g0055 glyphshow
+2212 981 moveto
+/g0048 glyphshow
+2229 981 moveto
+/g0047 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2248 981 moveto
+/g0042 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2266 981 moveto
+/g0047 glyphshow
+2284 981 moveto
+/g0055 glyphshow
+2296 981 moveto
+/g004c glyphshow
+2304 981 moveto
+/g0059 glyphshow
+2321 981 moveto
+/g0048 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2338 981 moveto
+/g000c glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.8196 0.9215 0.9450 SC
+NP 8 1368 m 516 1368 l 516 1614 l 8 1614 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 8 1614 m 516 1614 l 516 1368 l 8 1368 l 8 1614 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[42 0 0 -42 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+128 1483 moveto
+/g0032 glyphshow
+158 1483 moveto
+/g0053 glyphshow
+181 1483 moveto
+/g0048 glyphshow
+203 1483 moveto
+/g0051 glyphshow
+226 1483 moveto
+%%glyph 0031
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0031 67 RD
+f72bff000005570dfabd8b15fb728b05
+fd26ff00000504058bfffffffafc05fb
+4d8b058bff000005d105f7ad8b05f8eb
+fffffffb65058bff0000049b05f74d8b
+05090e
+ND
+end end
+/g0031 glyphshow
+254 1483 moveto
+%%glyph 002c
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g002c 60 RD
+e8f9900df8d68b15fcd68b058bf72c05
+f7528b058bff000004a105fb528b058b
+f72c05f8d68b058bfb2c05fb528b058b
+fffffffb5f05f7528b05090e
+ND
+end end
+/g002c glyphshow
+269 1483 moveto
+%%glyph 0003
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0003 5 RD
+8bf9140d0e
+ND
+end end
+/g0003 glyphshow
+282 1483 moveto
+%%glyph 002e
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g002e 63 RD
+f72bff000004b40dfad18b15fb958b05
+fcb3f949053429058bfce705fb5a8b05
+8bff000005d105f75a8b058bfd4105f8
+f6f94105f7858b05fcfcfd2d05090e
+ND
+end end
+/g002e glyphshow
+307 1483 moveto
+/g004c glyphshow
+316 1483 moveto
+/g0051 glyphshow
+340 1483 moveto
+/g0048 glyphshow
+362 1483 moveto
+%%glyph 0046
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0046 194 RD
+c6fa450df89d72153e8c45974ba2084b
+a254af5dbb085dbb67c872d40872d47e
+e08bee088bed98e0a6d208a5d2aec7b7
+bc08b7bcc2b0cda608cca5d298d68b08
+c88bc782c47a08c47abd77b874088bfb
+6705808b057e967a98769a08769a719a
+6d9a0871986c97689508689569906a8b
+082a8b3d6650420850416d238bfb1b08
+8bfb18a824c44208c441da66f08b08c8
+8bc698c2a408c2a4bcacb6b308968b05
+8bfb6705788274816f7f086f7e728274
+85086b826e8472860872866a89638a08
+090e
+ND
+end end
+/g0046 glyphshow
+381 1483 moveto
+/g0057 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+199 1525 moveto
+/g000b glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+212 1525 moveto
+/g0052 glyphshow
+230 1525 moveto
+/g0053 glyphshow
+249 1525 moveto
+/g0048 glyphshow
+266 1525 moveto
+/g0051 glyphshow
+285 1525 moveto
+/g0051 glyphshow
+303 1525 moveto
+/g004c glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+311 1525 moveto
+/g000c glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+1.9995 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 516 929 m 1373 1443 l stroke
+GSE
+GpPBeg1
+0 0 0 SC
+NP 1401 1460 m 1383 1459 l 1392 1443 l 1401 1460 l CP 
+1383 1459 m 1401 1460 l 1383 1459 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1401 1460 m 1383 1459 l 1392 1443 l 1401 1460 l CP 
+stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1383 1459 m 1401 1460 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+1.9995 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1388 1451 m 1365 1438 l stroke
+GSE
+GpPBeg1
+1 1 1 SC
+NP 869 1131 m 1056 1131 l 1056 1171 l 869 1171 l CP 
+eofill
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+868 1161 moveto
+/g0029 glyphshow
+886 1161 moveto
+/g0036 glyphshow
+904 1161 moveto
+/g0035 glyphshow
+925 1161 moveto
+%%glyph 0027
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0027 176 RD
+f72bff0000056d0dff00000496f97b15
+8bfb1c70fb0f54fb010854fb0141352e
+4e08405c3e6b3e7b083d7b2883fb0d8b
+08fbeb8b058bff000005d105f7e78b05
+f7208bf70281db7608da76cf6ec36608
+eb4cd537c02208c022a5fb128bfb2508
+09fb628e158bf70778ed65dc0865dc53
+ca40b80856ab53a24f99084f99409232
+8b08fb2b8b058bfffffffb8305f72b8b
+05e38bd892cd9908cd99c7a5c2b108d0
+babec9aed908aed89cec8bf70808090e
+ND
+end end
+/g0027 glyphshow
+948 1161 moveto
+/g004c glyphshow
+955 1161 moveto
+/g0055 glyphshow
+967 1161 moveto
+/g0048 glyphshow
+985 1161 moveto
+/g0046 glyphshow
+1000 1161 moveto
+/g0057 glyphshow
+1011 1161 moveto
+/g004c glyphshow
+1019 1161 moveto
+/g0052 glyphshow
+1037 1161 moveto
+/g0051 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+1.9995 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 516 1490 m 583 1490 l stroke
+GSE
+GpPBeg1
+0 0 0 SC
+NP 616 1490 m 600 1500 l 600 1481 l 616 1490 l CP 
+600 1500 m 616 1490 l 600 1500 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 616 1490 m 600 1500 l 600 1481 l 616 1490 l CP 
+stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 600 1500 m 616 1490 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+1.9995 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 600 1490 m 574 1490 l stroke
+GSE
+GpPBeg1
+1 1 1 SC
+NP 523 1426 m 610 1426 l 610 1466 l 523 1466 l CP 
+eofill
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+522 1456 moveto
+%%glyph 0012
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0012 34 RD
+73f9a30df984ff0000061415fcdbffff
+fff8a805fb3d8b05f8d8ff0000075805
+090e
+ND
+end end
+/g0012 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+535 1456 moveto
+/g0057 glyphshow
+546 1456 moveto
+/g0052 glyphshow
+564 1456 moveto
+/g0055 glyphshow
+576 1456 moveto
+/g0056 glyphshow
+591 1456 moveto
+/g0052 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+1.9995 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 516 929 m 680 574 l stroke
+GSE
+GpPBeg1
+0 0 0 SC
+NP 694 544 m 696 562 l 679 554 l 694 544 l CP 
+696 562 m 694 544 l 696 562 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 694 544 m 696 562 l 679 554 l 694 544 l CP 
+stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 696 562 m 694 544 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+1.9995 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 687 558 m 676 582 l stroke
+GSE
+GpPBeg1
+1 1 1 SC
+NP 495 677 m 701 677 l 701 717 l 495 717 l CP 
+eofill
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+495 706 moveto
+/g0033 glyphshow
+513 706 moveto
+/g004f glyphshow
+521 706 moveto
+/g0044 glyphshow
+538 706 moveto
+/g0057 glyphshow
+550 706 moveto
+/g0049 glyphshow
+560 706 moveto
+/g0052 glyphshow
+578 706 moveto
+/g0055 glyphshow
+590 706 moveto
+/g0050 glyphshow
+618 706 moveto
+%%glyph 0024
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0024 66 RD
+81ff000004cc0d8b8b15f88aff000005
+d105f7888b05f88afffffffa2f05fb65
+8b05fb1bf83405fccd8b05fb1bfc3405
+09f91df8dd15fb7af95205fb79fd5205
+090e
+ND
+end end
+/g0024 glyphshow
+638 706 moveto
+/g0051 glyphshow
+657 706 moveto
+%%glyph 004a
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g004a 261 RD
+c6ff0000046c0df981f7c3158bf8f905
+5ca2609b64950863946390648b082c8b
+4068544508544570278bfb17088bfb10
+a02db54a08b44acf6be88b08bc8bbd95
+bf9e08be9ebaa6b4ae0809fd0cfc7615
+98869d84a48208a482a783aa8208ae83
+ab84a88608a886ab88ae8a08c58cbc93
+b49a08b39aaaa0a2a608a0a79aab94af
+0894af8fb38bb9088bed05585f5a6b5a
+76085a764e80428b08fb138b25ba40ea
+0840ea65f71c8bf745088be898dda5d3
+08a5d2aec8b7bd08b5bbbdb0c4a508c4
+a5c798c88b08c58bbd84b67e08b57db5
+77b6720896bb05f7458b058bfe72058b
+fb5162fb1e3832083832fb125ffb3e8a
+08548c548f529408529455965a99088b
+f75805090e
+ND
+end end
+/g004a glyphshow
+675 706 moveto
+/g004f glyphshow
+683 706 moveto
+/g0048 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+1.9995 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1909 593 m 2055 785 l stroke
+GSE
+GpPBeg1
+0 0 0 SC
+NP 2075 811 m 2057 804 l 2072 793 l 2075 811 l CP 
+2057 804 m 2075 811 l 2057 804 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2075 811 m 2057 804 l 2072 793 l 2075 811 l CP 
+stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2057 804 m 2075 811 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+1.9995 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2065 798 m 2049 778 l stroke
+GSE
+GpPBeg1
+1 1 1 SC
+NP 1995 688 m 2152 688 l 2152 728 l 1995 728 l CP 
+eofill
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+1994 717 moveto
+/g0027 glyphshow
+2017 717 moveto
+/g0055 glyphshow
+2029 717 moveto
+/g004c glyphshow
+2037 717 moveto
+/g0059 glyphshow
+2053 717 moveto
+/g0048 glyphshow
+2071 717 moveto
+/g0037 glyphshow
+2090 717 moveto
+/g0044 glyphshow
+2108 717 moveto
+/g0045 glyphshow
+2126 717 moveto
+/g004f glyphshow
+2134 717 moveto
+/g0048 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+1.9995 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1996 906 m 1835 695 l stroke
+GSE
+GpPBeg1
+0 0 0 SC
+NP 1815 669 m 1832 677 l 1817 688 l 1815 669 l CP 
+1832 677 m 1815 669 l 1832 677 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1815 669 m 1832 677 l 1817 688 l 1815 669 l CP 
+stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1832 677 m 1815 669 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+1.9995 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1825 682 m 1840 703 l stroke
+GSE
+GpPBeg1
+1 1 1 SC
+NP 1740 760 m 1954 760 l 1954 800 l 1740 800 l CP 
+eofill
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+1740 789 moveto
+/g0037 glyphshow
+1759 789 moveto
+/g0044 glyphshow
+1776 789 moveto
+/g0045 glyphshow
+1795 789 moveto
+/g004f glyphshow
+1803 789 moveto
+/g0048 glyphshow
+1820 789 moveto
+%%glyph 0028
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0028 60 RD
+f72bff0000047d0d8b8b158bff000005
+d105fa378b058bfb4405fd718b058bfc
+2c05f93f8b058bfb4405fd3f8b058bfc
+bd05f9718b058bfb4405090e
+ND
+end end
+/g0028 glyphshow
+1839 789 moveto
+/g0051 glyphshow
+1857 789 moveto
+/g0046 glyphshow
+1873 789 moveto
+/g0052 glyphshow
+1891 789 moveto
+/g0047 glyphshow
+1909 789 moveto
+/g0048 glyphshow
+1927 789 moveto
+/g0055 glyphshow
+1939 789 moveto
+/g0056 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+1.9995 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1909 1491 m 1991 1021 l stroke
+GSE
+GpPBeg1
+0 0 0 SC
+NP 1996 989 m 2003 1006 l 1984 1003 l 1996 989 l CP 
+2003 1006 m 1996 989 l 2003 1006 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1996 989 m 2003 1006 l 1984 1003 l 1996 989 l CP 
+stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2003 1006 m 1996 989 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+1.9995 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1994 1005 m 1989 1030 l stroke
+GSE
+GpPBeg1
+1 1 1 SC
+NP 1910 1202 m 2148 1202 l 2148 1242 l 1910 1242 l CP 
+eofill
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+1909 1231 moveto
+/g0025 glyphshow
+1929 1231 moveto
+/g0044 glyphshow
+1947 1231 moveto
+/g0056 glyphshow
+1962 1231 moveto
+/g0048 glyphshow
+1979 1231 moveto
+/g0030 glyphshow
+2005 1231 moveto
+/g0052 glyphshow
+2023 1231 moveto
+/g0057 glyphshow
+2034 1231 moveto
+/g0052 glyphshow
+2052 1231 moveto
+/g0055 glyphshow
+2064 1231 moveto
+/g0032 glyphshow
+2088 1231 moveto
+/g0055 glyphshow
+2100 1231 moveto
+/g0047 glyphshow
+2118 1231 moveto
+/g0048 glyphshow
+2136 1231 moveto
+/g0055 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.8196 0.9215 0.9450 SC
+NP 1401 424 m 1909 424 l 1909 670 l 1401 670 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1401 670 m 1909 670 l 1909 424 l 1401 424 l 1401 670 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[42 0 0 -42 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+1497 539 moveto
+/g0037 glyphshow
+1521 539 moveto
+/g0044 glyphshow
+1543 539 moveto
+/g0045 glyphshow
+1566 539 moveto
+/g004f glyphshow
+1576 539 moveto
+/g0048 glyphshow
+1598 539 moveto
+/g0028 glyphshow
+1621 539 moveto
+/g0051 glyphshow
+1644 539 moveto
+/g0046 glyphshow
+1663 539 moveto
+/g0052 glyphshow
+1686 539 moveto
+/g0047 glyphshow
+1709 539 moveto
+/g0048 glyphshow
+1731 539 moveto
+/g0055 glyphshow
+1746 539 moveto
+/g0033 glyphshow
+1769 539 moveto
+/g002c glyphshow
+1785 539 moveto
+/g0027 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+1555 582 moveto
+/g000b glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+1568 582 moveto
+/g0044 glyphshow
+1585 582 moveto
+/g004f glyphshow
+1593 582 moveto
+/g0049 glyphshow
+1604 582 moveto
+/g0055 glyphshow
+1616 582 moveto
+/g0048 glyphshow
+1633 582 moveto
+/g0047 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+1652 582 moveto
+/g0042 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+1670 582 moveto
+/g0057 glyphshow
+1681 582 moveto
+/g0044 glyphshow
+1698 582 moveto
+/g0045 glyphshow
+1717 582 moveto
+/g004f glyphshow
+1724 582 moveto
+/g0048 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+1742 582 moveto
+/g000c glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.6666 1 0.6666 SC
+NP 2547 162 m 2951 162 l 2951 322 l 2547 322 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0.5019 0 SC
+NP 2547 322 m 2951 322 l 2951 162 l 2547 162 l 2547 322 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2661 251 moveto
+/g0037 glyphshow
+2680 251 moveto
+/g0052 glyphshow
+2699 251 moveto
+/g0053 glyphshow
+2717 251 moveto
+/g004c glyphshow
+2725 251 moveto
+/g0046 glyphshow
+2740 251 moveto
+/g0003 glyphshow
+2750 251 moveto
+/g0031 glyphshow
+2773 251 moveto
+/g0044 glyphshow
+2790 251 moveto
+/g0050 glyphshow
+2818 251 moveto
+/g0048 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.6666 1 0.6666 SC
+NP 2951 162 m 3355 162 l 3355 322 l 2951 322 l CP 
+eofill
+GSE
+GpPBeg1
+NP 0 0 m 3358 0 l 3358 2329 l 0 2329 l CP 
+eoclip
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0.5019 0 SC
+NP 2951 322 m 3355 322 l 3355 162 l 2951 162 l 2951 322 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3087 251 moveto
+/g0026 glyphshow
+3107 251 moveto
+/g0052 glyphshow
+3125 251 moveto
+/g0051 glyphshow
+3144 251 moveto
+/g0057 glyphshow
+3155 251 moveto
+/g0048 glyphshow
+3173 251 moveto
+/g0051 glyphshow
+3191 251 moveto
+/g0057 glyphshow
+3202 251 moveto
+/g0056 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.6666 1 0.6666 SC
+NP 2547 322 m 2951 322 l 2951 483 l 2547 483 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0.5019 0 SC
+NP 2547 483 m 2951 483 l 2951 322 l 2547 322 l 2547 483 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2667 412 moveto
+/g0037 glyphshow
+2686 412 moveto
+/g0044 glyphshow
+2704 412 moveto
+/g0045 glyphshow
+2722 412 moveto
+/g004f glyphshow
+2730 412 moveto
+/g0048 glyphshow
+2748 412 moveto
+/g0024 glyphshow
+2767 412 moveto
+/g0051 glyphshow
+2786 412 moveto
+/g004a glyphshow
+2804 412 moveto
+/g004f glyphshow
+2812 412 moveto
+/g0048 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.6666 1 0.6666 SC
+NP 2547 483 m 2951 483 l 2951 643 l 2547 643 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0.5019 0 SC
+NP 2547 643 m 2951 643 l 2951 483 l 2547 483 l 2547 643 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2655 573 moveto
+/g0029 glyphshow
+2672 573 moveto
+/g0036 glyphshow
+2691 573 moveto
+/g0035 glyphshow
+2711 573 moveto
+/g0027 glyphshow
+2734 573 moveto
+/g004c glyphshow
+2742 573 moveto
+/g0055 glyphshow
+2754 573 moveto
+/g0048 glyphshow
+2771 573 moveto
+/g0046 glyphshow
+2786 573 moveto
+/g0057 glyphshow
+2798 573 moveto
+/g004c glyphshow
+2805 573 moveto
+/g0052 glyphshow
+2823 573 moveto
+/g0051 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.6666 1 0.6666 SC
+NP 2547 643 m 2951 643 l 2951 804 l 2547 804 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0.5019 0 SC
+NP 2547 804 m 2951 804 l 2951 643 l 2547 643 l 2547 804 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2705 733 moveto
+/g0012 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2718 733 moveto
+/g0057 glyphshow
+2729 733 moveto
+/g0052 glyphshow
+2747 733 moveto
+/g0055 glyphshow
+2759 733 moveto
+/g0056 glyphshow
+2774 733 moveto
+/g0052 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.6666 1 0.6666 SC
+NP 2547 804 m 2951 804 l 2951 965 l 2547 965 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0.5019 0 SC
+NP 2547 965 m 2951 965 l 2951 804 l 2547 804 l 2547 965 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2670 894 moveto
+/g0027 glyphshow
+2692 894 moveto
+/g0055 glyphshow
+2704 894 moveto
+/g004c glyphshow
+2712 894 moveto
+/g0059 glyphshow
+2729 894 moveto
+/g0048 glyphshow
+2746 894 moveto
+/g0037 glyphshow
+2766 894 moveto
+/g0044 glyphshow
+2783 894 moveto
+/g0045 glyphshow
+2802 894 moveto
+/g004f glyphshow
+2809 894 moveto
+/g0048 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.6666 1 0.6666 SC
+NP 2547 965 m 2951 965 l 2951 1125 l 2547 1125 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0.5019 0 SC
+NP 2547 1125 m 2951 1125 l 2951 965 l 2547 965 l 2547 1125 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2629 1055 moveto
+/g0025 glyphshow
+2649 1055 moveto
+/g0044 glyphshow
+2666 1055 moveto
+/g0056 glyphshow
+2681 1055 moveto
+/g0048 glyphshow
+2699 1055 moveto
+/g0030 glyphshow
+2724 1055 moveto
+/g0052 glyphshow
+2743 1055 moveto
+/g0057 glyphshow
+2754 1055 moveto
+/g0052 glyphshow
+2772 1055 moveto
+/g0055 glyphshow
+2784 1055 moveto
+/g0032 glyphshow
+2807 1055 moveto
+/g0055 glyphshow
+2819 1055 moveto
+/g0047 glyphshow
+2838 1055 moveto
+/g0048 glyphshow
+2855 1055 moveto
+/g0055 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.6666 1 0.6666 SC
+NP 2547 1125 m 2951 1125 l 2951 1286 l 2547 1286 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0.5019 0 SC
+NP 2547 1286 m 2951 1286 l 2951 1125 l 2547 1125 l 2547 1286 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2641 1215 moveto
+/g0037 glyphshow
+2661 1215 moveto
+/g0044 glyphshow
+2678 1215 moveto
+/g0045 glyphshow
+2697 1215 moveto
+/g004f glyphshow
+2704 1215 moveto
+/g0048 glyphshow
+2722 1215 moveto
+/g0028 glyphshow
+2740 1215 moveto
+/g0051 glyphshow
+2759 1215 moveto
+/g0046 glyphshow
+2774 1215 moveto
+/g0052 glyphshow
+2793 1215 moveto
+/g0047 glyphshow
+2811 1215 moveto
+/g0048 glyphshow
+2828 1215 moveto
+/g0055 glyphshow
+2841 1215 moveto
+/g0056 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.6666 1 0.6666 SC
+NP 2547 1286 m 2951 1286 l 2951 1447 l 2547 1447 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0.5019 0 SC
+NP 2547 1447 m 2951 1447 l 2951 1286 l 2547 1286 l 2547 1447 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2650 1373 moveto
+/g0037 glyphshow
+2669 1373 moveto
+/g0044 glyphshow
+2687 1373 moveto
+/g0045 glyphshow
+2705 1373 moveto
+/g004f glyphshow
+2713 1373 moveto
+/g0048 glyphshow
+2730 1373 moveto
+/g0033 glyphshow
+2749 1373 moveto
+/g0052 glyphshow
+2767 1373 moveto
+/g0056 glyphshow
+2782 1373 moveto
+/g004c glyphshow
+2789 1373 moveto
+/g0057 glyphshow
+2800 1373 moveto
+/g004c glyphshow
+2808 1373 moveto
+/g0052 glyphshow
+2826 1373 moveto
+/g0051 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.6666 1 0.6666 SC
+NP 2547 1447 m 2951 1447 l 2951 1607 l 2547 1607 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0.5019 0 SC
+NP 2547 1607 m 2951 1607 l 2951 1447 l 2547 1447 l 2547 1607 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2627 1536 moveto
+/g0029 glyphshow
+2645 1536 moveto
+/g0052 glyphshow
+2663 1536 moveto
+/g004f glyphshow
+2670 1536 moveto
+/g004f glyphshow
+2678 1536 moveto
+/g0052 glyphshow
+2696 1536 moveto
+%%glyph 005a
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g005a 73 RD
+a9ff000005f00dff000005b4faf115fb
+affef105fb428b05fba5f9f105fba3fd
+f105fb418b05fbb2faf105f7588b05f7
+59fdf505f79df9f505f72f8b05f7a4fd
+f505f74ef9f505090e
+ND
+end end
+/g005a glyphshow
+2721 1536 moveto
+/g0026 glyphshow
+2741 1536 moveto
+/g0052 glyphshow
+2759 1536 moveto
+/g0050 glyphshow
+2787 1536 moveto
+/g0050 glyphshow
+2815 1536 moveto
+/g0044 glyphshow
+2832 1536 moveto
+/g0051 glyphshow
+2851 1536 moveto
+/g0047 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.6666 1 0.6666 SC
+NP 2951 322 m 3355 322 l 3355 483 l 2951 483 l CP 
+eofill
+GSE
+GpPBeg1
+NP 0 0 m 3358 0 l 3358 2329 l 0 2329 l CP 
+eoclip
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0.5019 0 SC
+NP 2951 483 m 3355 483 l 3355 322 l 2951 322 l 2951 483 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2966 392 moveto
+/g0024 glyphshow
+2986 392 moveto
+/g0046 glyphshow
+3001 392 moveto
+/g0046 glyphshow
+3017 392 moveto
+/g0048 glyphshow
+3034 392 moveto
+/g004f glyphshow
+3042 392 moveto
+/g0048 glyphshow
+3059 392 moveto
+/g0055 glyphshow
+3071 392 moveto
+/g0052 glyphshow
+3089 392 moveto
+/g0050 glyphshow
+3117 392 moveto
+/g0048 glyphshow
+3135 392 moveto
+/g0057 glyphshow
+3146 392 moveto
+/g0048 glyphshow
+3164 392 moveto
+/g0055 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3176 392 moveto
+%%glyph 000f
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g000f 25 RD
+d5f9000df83ef7b115fbacfd2305fb26
+8b05f744f92305090e
+ND
+end end
+/g000f glyphshow
+3186 392 moveto
+/g0003 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3196 392 moveto
+%%glyph 002a
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g002a 246 RD
+cdff000005570df9586e15228c2a9b34
+aa0834ab40bc4ccc084ccd5bdd6aec08
+6aec7af7048bf713088bf70c9cf700ad
+ea08aceabbdccace08c8ccd5bee4ae08
+e4aeec9df48b08bd8bbb87b98408b984
+b781b57e08ac81b17db47a08b479ac7c
+a47e088bfb83057a8b0572a172a0719f
+08709e66a05ba208639f5d9c57980857
+9853924f8b08fb238bfb085533fb0008
+32fb005ffb248bfb47088b279734a240
+08a240ad4cb75708b658be64c87008c7
+70cf7dd68b08c38bc38fc29308c293ba
+97b19b088bf81505fbec8b058bf74205
+f8b08b058bfd1e057280697c617a0860
+7a647d6681085a7c5f8164840864845b
+87538a08090e
+ND
+end end
+/g002a glyphshow
+3218 392 moveto
+%%glyph 005c
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g005c 47 RD
+91fa900dfa84faf115fcedfffffffa07
+05fb5d8b05f75cf86605fc2afabb05f7
+5f8b05f7c5fdcf05f7c4f9cf05090e
+ND
+end end
+/g005c glyphshow
+3235 392 moveto
+/g0055 glyphshow
+3247 392 moveto
+/g0052 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3265 392 moveto
+/g000f glyphshow
+3275 392 moveto
+/g0003 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3285 392 moveto
+%%glyph 0038
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0038 150 RD
+f719ff0000053f0df8ae6c15348c3e96
+4aa2084aa253ad5db80857bf66c976d4
+0876d380e48bf5088bfa3505f75a8b05
+8bfe35058b468f52945c08945c9c60a4
+6608a663af6db97608b876c381cd8b08
+c98bc295bba008bba0b0a9a6b308a4b1
+9cb594b90894b98fc38bce088bfa3a05
+f75a8b058bfe35058b24813276410876
+41664c5658085c5d54694c74084c753d
+80308a08090e
+ND
+end end
+/g0038 glyphshow
+3307 392 moveto
+/g0053 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3326 392 moveto
+/g0012 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3086 432 moveto
+/g0027 glyphshow
+3109 432 moveto
+/g0052 glyphshow
+3127 432 moveto
+/g005a glyphshow
+3152 432 moveto
+/g0051 glyphshow
+3170 432 moveto
+/g0003 glyphshow
+3181 432 moveto
+/g0045 glyphshow
+3199 432 moveto
+/g004c glyphshow
+3207 432 moveto
+/g0057 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.6666 1 0.6666 SC
+NP 2951 483 m 3355 483 l 3355 643 l 2951 643 l CP 
+eofill
+GSE
+GpPBeg1
+NP 0 0 m 3358 0 l 3358 2329 l 0 2329 l CP 
+eoclip
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0.5019 0 SC
+NP 2951 643 m 3355 643 l 3355 483 l 2951 483 l 2951 643 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2962 553 moveto
+%%glyph 003b
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g003b 67 RD
+93ff000004a50dff000004958b15fb77
+8b05fbfff8e805fc05fce805fb6a8b05
+f86df97d05fc5ff97c05f7768b05f7f8
+fcdd05f7fdf8dd05f76b8b05fc66fd72
+05090e
+ND
+end end
+/g003b glyphshow
+2981 553 moveto
+%%glyph 003c
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g003c 56 RD
+80ff0000049c0dff000004b4ff000005
+d115fc8bfdd2058bfd2705fb5a8b058b
+f91205fc8bf9e705f7708b05f814fd25
+05f81af92505090e
+ND
+end end
+/g003c glyphshow
+3000 553 moveto
+/g0003 glyphshow
+3011 553 moveto
+%%glyph 0039
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0039 60 RD
+83ff000004c60dff000004d6ff000005
+d115fc94fffffffa2f05fb6a8b05fc94
+ff000005d105f7688b05f830fffffffb
+2c05f830ff000004d405090e
+ND
+end end
+/g0039 glyphshow
+3031 553 moveto
+/g0048 glyphshow
+3048 553 moveto
+/g0046 glyphshow
+3064 553 moveto
+/g0057 glyphshow
+3075 553 moveto
+/g0052 glyphshow
+3093 553 moveto
+/g0055 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3105 553 moveto
+/g000f glyphshow
+3115 553 moveto
+/g0003 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3125 553 moveto
+/g0036 glyphshow
+3144 553 moveto
+/g0053 glyphshow
+3162 553 moveto
+/g0048 glyphshow
+3180 553 moveto
+/g0048 glyphshow
+3197 553 moveto
+/g0047 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3216 553 moveto
+/g000f glyphshow
+3226 553 moveto
+/g0003 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3236 553 moveto
+/g0035 glyphshow
+3257 553 moveto
+/g0052 glyphshow
+3275 553 moveto
+/g0057 glyphshow
+3286 553 moveto
+/g0044 glyphshow
+3304 553 moveto
+/g0057 glyphshow
+3315 553 moveto
+/g0048 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3332 553 moveto
+/g000f glyphshow
+3342 553 moveto
+/g0003 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3105 593 moveto
+/g0029 glyphshow
+3123 593 moveto
+/g0052 glyphshow
+3141 593 moveto
+/g004f glyphshow
+3148 593 moveto
+/g004f glyphshow
+3156 593 moveto
+/g0052 glyphshow
+3174 593 moveto
+/g005a glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.6666 1 0.6666 SC
+NP 2951 643 m 3355 643 l 3355 804 l 2951 804 l CP 
+eofill
+GSE
+GpPBeg1
+NP 0 0 m 3358 0 l 3358 2329 l 0 2329 l CP 
+eoclip
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0.5019 0 SC
+NP 2951 804 m 3355 804 l 3355 643 l 2951 643 l 2951 804 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3071 693 moveto
+/g0037 glyphshow
+3091 693 moveto
+/g0052 glyphshow
+3109 693 moveto
+/g0055 glyphshow
+3121 693 moveto
+/g0056 glyphshow
+3136 693 moveto
+/g0052 glyphshow
+3154 693 moveto
+/g0003 glyphshow
+3164 693 moveto
+/g0053 glyphshow
+3183 693 moveto
+/g0052 glyphshow
+3201 693 moveto
+/g0056 glyphshow
+3216 693 moveto
+/g0048 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2995 733 moveto
+/g000b glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3008 733 moveto
+/g0031 glyphshow
+3030 733 moveto
+/g0032 glyphshow
+3054 733 moveto
+/g0037 glyphshow
+3073 733 moveto
+/g0028 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3092 733 moveto
+%%glyph 001d
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g001d 41 RD
+f787f9680df783f9d415fb838b058bf7
+b105f7838b05098bfef115fb838b058b
+f7b105f7838b05090e
+ND
+end end
+/g001d glyphshow
+3104 733 moveto
+/g0003 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3114 733 moveto
+/g0037 glyphshow
+3134 733 moveto
+%%glyph 004b
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g004b 117 RD
+f71cff000004760dfa028b15fb508b05
+8bf910058bbe89bb86b80886b781ae7d
+a6087ca775a0709908709865925c8b08
+5c8b5b7f5a720859725a6a5c63088bfd
+d605fb508b058bff0000061405f7508b
+058bfcc705c3bdc2b1c2a608c2a6c498
+c88b08f7028be167c94308c942aa228b
+fb1d08090e
+ND
+end end
+/g004b glyphshow
+3152 733 moveto
+/g004c glyphshow
+3160 733 moveto
+/g0056 glyphshow
+3175 733 moveto
+/g0003 glyphshow
+3185 733 moveto
+/g004c glyphshow
+3193 733 moveto
+/g0056 glyphshow
+3208 733 moveto
+/g0003 glyphshow
+3218 733 moveto
+/g0044 glyphshow
+3236 733 moveto
+/g0003 glyphshow
+3246 733 moveto
+/g0035 glyphshow
+3267 733 moveto
+/g0032 glyphshow
+3290 733 moveto
+/g0036 glyphshow
+3309 733 moveto
+/g0003 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3000 773 moveto
+/g0036 glyphshow
+3019 773 moveto
+/g0057 glyphshow
+3030 773 moveto
+/g0044 glyphshow
+3047 773 moveto
+/g0050 glyphshow
+3075 773 moveto
+/g0053 glyphshow
+3094 773 moveto
+/g0048 glyphshow
+3111 773 moveto
+/g0047 glyphshow
+3130 773 moveto
+/g0003 glyphshow
+3140 773 moveto
+/g0037 glyphshow
+3160 773 moveto
+/g0055 glyphshow
+3172 773 moveto
+/g0044 glyphshow
+3189 773 moveto
+/g0051 glyphshow
+3208 773 moveto
+/g0056 glyphshow
+3223 773 moveto
+/g0049 glyphshow
+3233 773 moveto
+/g0052 glyphshow
+3251 773 moveto
+/g0055 glyphshow
+3263 773 moveto
+/g0050 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3291 773 moveto
+/g000c glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.6666 1 0.6666 SC
+NP 2951 804 m 3355 804 l 3355 965 l 2951 965 l CP 
+eofill
+GSE
+GpPBeg1
+NP 0 0 m 3358 0 l 3358 2329 l 0 2329 l CP 
+eoclip
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0.5019 0 SC
+NP 2951 965 m 3355 965 l 3355 804 l 2951 804 l 2951 965 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2965 894 moveto
+%%glyph 0017
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0017 66 RD
+b3faf20dfa97f89415fb458b058bfc94
+05fb548b058bf89405fd268b058bf766
+05f92ef99305f74c8b058bfdc505f745
+8b0509fc058b158bf8da05fc8afcda05
+090e
+ND
+end end
+/g0017 glyphshow
+2983 894 moveto
+/g0003 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2994 894 moveto
+/g0037 glyphshow
+3013 894 moveto
+/g0044 glyphshow
+3031 894 moveto
+/g0045 glyphshow
+3049 894 moveto
+/g004f glyphshow
+3057 894 moveto
+/g0048 glyphshow
+3074 894 moveto
+/g0003 glyphshow
+3085 894 moveto
+/g0030 glyphshow
+3110 894 moveto
+/g0052 glyphshow
+3129 894 moveto
+/g0057 glyphshow
+3140 894 moveto
+/g0052 glyphshow
+3158 894 moveto
+/g0055 glyphshow
+3170 894 moveto
+/g0003 glyphshow
+3180 894 moveto
+/g0046 glyphshow
+3196 894 moveto
+/g0052 glyphshow
+3214 894 moveto
+/g0050 glyphshow
+3242 894 moveto
+/g0050 glyphshow
+3270 894 moveto
+/g0044 glyphshow
+3287 894 moveto
+/g0051 glyphshow
+3306 894 moveto
+/g0047 glyphshow
+3324 894 moveto
+/g0056 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.6666 1 0.6666 SC
+NP 2951 965 m 3355 965 l 3355 1125 l 2951 1125 l CP 
+eofill
+GSE
+GpPBeg1
+NP 0 0 m 3358 0 l 3358 2329 l 0 2329 l CP 
+eoclip
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0.5019 0 SC
+NP 2951 1125 m 3355 1125 l 3355 965 l 2951 965 l 2951 1125 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2968 1055 moveto
+%%glyph 0016
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g0016 307 RD
+ecfaf20df832ff0000054315678b6787
+67820867826880687d086b7e6f7d747c
+08737c767e787e087f8b058bf76705b6
+a2c6a1d69e08d59ed294ce8b08ce8bc6
+84be7e08bd7db876b46e08b76bac64a2
+5e08a15e96568b4e088b397043554d08
+554d4a64407a088b7d05aa85ad81af7c
+08ae7cac76aa6e08aa6ea4679e5e089e
+5e95548b4a088b48804d74530874526a
+59616008605e56684e74084e7445803d
+8a08408c4194429d08429c4da159a408
+8bf76705998b05b56cc36ed26f08d26f
+d17dd28b08b48bb492b49808b498ada0
+a6a808a6a89fac99ae0899ae92b88bc1
+088bc183b77cae087bae75a66f9f086f
+9f6a996593086492628f5e8b08368b05
+8bf73a05cd8b05e58bd4a0c4b608c3b6
+a7c98bdc088bb084ac7ca6087ca679a0
+749b08729c6f976c92086c926b8e688b
+08090e
+ND
+end end
+/g0016 glyphshow
+2987 1055 moveto
+/g0003 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2997 1055 moveto
+/g0025 glyphshow
+3017 1055 moveto
+/g0044 glyphshow
+3034 1055 moveto
+/g0056 glyphshow
+3049 1055 moveto
+/g0048 glyphshow
+3067 1055 moveto
+/g0003 glyphshow
+3077 1055 moveto
+/g0030 glyphshow
+3103 1055 moveto
+/g0052 glyphshow
+3121 1055 moveto
+/g0057 glyphshow
+3132 1055 moveto
+/g0052 glyphshow
+3150 1055 moveto
+/g0055 glyphshow
+3162 1055 moveto
+/g0003 glyphshow
+3172 1055 moveto
+/g0026 glyphshow
+3192 1055 moveto
+/g0052 glyphshow
+3211 1055 moveto
+/g0050 glyphshow
+3239 1055 moveto
+/g0050 glyphshow
+3267 1055 moveto
+/g0044 glyphshow
+3284 1055 moveto
+/g0051 glyphshow
+3303 1055 moveto
+/g0047 glyphshow
+3321 1055 moveto
+/g0056 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.6666 1 0.6666 SC
+NP 2951 1125 m 3355 1125 l 3355 1286 l 2951 1286 l CP 
+eofill
+GSE
+GpPBeg1
+NP 0 0 m 3358 0 l 3358 2329 l 0 2329 l CP 
+eoclip
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0.5019 0 SC
+NP 2951 1286 m 3355 1286 l 3355 1125 l 2951 1125 l 2951 1286 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2977 1215 moveto
+/g0017 glyphshow
+2995 1215 moveto
+/g0003 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3006 1215 moveto
+/g0037 glyphshow
+3025 1215 moveto
+/g0044 glyphshow
+3043 1215 moveto
+/g0045 glyphshow
+3061 1215 moveto
+/g004f glyphshow
+3069 1215 moveto
+/g0048 glyphshow
+3086 1215 moveto
+/g0003 glyphshow
+3097 1215 moveto
+/g0028 glyphshow
+3115 1215 moveto
+/g0051 glyphshow
+3134 1215 moveto
+/g0046 glyphshow
+3149 1215 moveto
+/g0052 glyphshow
+3167 1215 moveto
+/g0047 glyphshow
+3186 1215 moveto
+/g0048 glyphshow
+3203 1215 moveto
+/g0055 glyphshow
+3215 1215 moveto
+/g0003 glyphshow
+3226 1215 moveto
+/g0026 glyphshow
+3246 1215 moveto
+/g0052 glyphshow
+3264 1215 moveto
+/g0058 glyphshow
+3283 1215 moveto
+/g0051 glyphshow
+3301 1215 moveto
+/g0057 glyphshow
+3312 1215 moveto
+/g0056 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.6666 1 0.6666 SC
+NP 2951 1286 m 3355 1286 l 3355 1447 l 2951 1447 l CP 
+eofill
+GSE
+GpPBeg1
+NP 0 0 m 3358 0 l 3358 2329 l 0 2329 l CP 
+eoclip
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0.5019 0 SC
+NP 2951 1447 m 3355 1447 l 3355 1286 l 2951 1286 l 2951 1447 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2993 1356 moveto
+/g0017 glyphshow
+3011 1356 moveto
+/g0003 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3022 1356 moveto
+/g0027 glyphshow
+3044 1356 moveto
+/g0048 glyphshow
+3062 1356 moveto
+/g0056 glyphshow
+3077 1356 moveto
+/g004c glyphshow
+3084 1356 moveto
+/g0055 glyphshow
+3096 1356 moveto
+/g0048 glyphshow
+3114 1356 moveto
+/g0047 glyphshow
+3132 1356 moveto
+/g0003 glyphshow
+3143 1356 moveto
+%%glyph 002f
+/Tahoma findfont dup
+/Private get begin
+/CharStrings get begin
+/g002f 37 RD
+f72bfa8f0df9f38b15fdf38b058bff00
+0005d105f75a8b058bfffffffadf05f9
+2d8b05090e
+ND
+end end
+/g002f glyphshow
+3159 1356 moveto
+/g0048 glyphshow
+3177 1356 moveto
+/g0044 glyphshow
+3194 1356 moveto
+/g0047 glyphshow
+3213 1356 moveto
+/g0003 glyphshow
+3223 1356 moveto
+/g0036 glyphshow
+3242 1356 moveto
+/g0046 glyphshow
+3257 1356 moveto
+/g0055 glyphshow
+3269 1356 moveto
+/g0048 glyphshow
+3287 1356 moveto
+/g005a glyphshow
+3311 1356 moveto
+/g0003 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+3023 1396 moveto
+/g0028 glyphshow
+3042 1396 moveto
+/g0051 glyphshow
+3060 1396 moveto
+/g0046 glyphshow
+3076 1396 moveto
+/g0052 glyphshow
+3094 1396 moveto
+/g0047 glyphshow
+3112 1396 moveto
+/g0048 glyphshow
+3130 1396 moveto
+/g0055 glyphshow
+3142 1396 moveto
+/g0003 glyphshow
+3152 1396 moveto
+/g0033 glyphshow
+3170 1396 moveto
+/g0052 glyphshow
+3189 1396 moveto
+/g0056 glyphshow
+3203 1396 moveto
+/g004c glyphshow
+3211 1396 moveto
+/g0057 glyphshow
+3222 1396 moveto
+/g004c glyphshow
+3230 1396 moveto
+/g0052 glyphshow
+3248 1396 moveto
+/g0051 glyphshow
+3266 1396 moveto
+/g0056 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.6666 1 0.6666 SC
+NP 2951 1447 m 3355 1447 l 3355 1607 l 2951 1607 l CP 
+eofill
+GSE
+GpPBeg1
+NP 0 0 m 3358 0 l 3358 2329 l 0 2329 l CP 
+eoclip
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0.5019 0 SC
+NP 2951 1607 m 3355 1607 l 3355 1447 l 2951 1447 l 2951 1607 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2968 1536 moveto
+/g0016 glyphshow
+2987 1536 moveto
+/g0003 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+2997 1536 moveto
+/g0025 glyphshow
+3017 1536 moveto
+/g0044 glyphshow
+3034 1536 moveto
+/g0056 glyphshow
+3049 1536 moveto
+/g0048 glyphshow
+3067 1536 moveto
+/g0003 glyphshow
+3077 1536 moveto
+/g0030 glyphshow
+3103 1536 moveto
+/g0052 glyphshow
+3121 1536 moveto
+/g0057 glyphshow
+3132 1536 moveto
+/g0052 glyphshow
+3150 1536 moveto
+/g0055 glyphshow
+3162 1536 moveto
+/g0003 glyphshow
+3172 1536 moveto
+/g0026 glyphshow
+3192 1536 moveto
+/g0052 glyphshow
+3211 1536 moveto
+/g0050 glyphshow
+3239 1536 moveto
+/g0050 glyphshow
+3267 1536 moveto
+/g0044 glyphshow
+3284 1536 moveto
+/g0051 glyphshow
+3303 1536 moveto
+/g0047 glyphshow
+3321 1536 moveto
+/g0056 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.8196 0.9215 0.9450 SC
+NP 616 1366 m 1124 1366 l 1124 1613 l 616 1613 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 616 1613 m 1124 1613 l 1124 1366 l 616 1366 l 616 1613 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[42 0 0 -42 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+669 1483 moveto
+/g0029 glyphshow
+691 1483 moveto
+/g0052 glyphshow
+713 1483 moveto
+/g004f glyphshow
+723 1483 moveto
+/g004f glyphshow
+732 1483 moveto
+/g0052 glyphshow
+755 1483 moveto
+/g005a glyphshow
+786 1483 moveto
+/g0030 glyphshow
+818 1483 moveto
+/g0052 glyphshow
+840 1483 moveto
+/g0057 glyphshow
+854 1483 moveto
+/g0052 glyphshow
+877 1483 moveto
+/g0055 glyphshow
+892 1483 moveto
+/g0026 glyphshow
+917 1483 moveto
+/g0052 glyphshow
+940 1483 moveto
+/g0051 glyphshow
+963 1483 moveto
+/g0057 glyphshow
+977 1483 moveto
+/g0055 glyphshow
+992 1483 moveto
+/g0052 glyphshow
+1014 1483 moveto
+/g004f glyphshow
+1024 1483 moveto
+/g004f glyphshow
+1034 1483 moveto
+/g0048 glyphshow
+1055 1483 moveto
+/g0055 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+770 1525 moveto
+/g000b glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+783 1525 moveto
+/g0044 glyphshow
+800 1525 moveto
+/g004f glyphshow
+808 1525 moveto
+/g0049 glyphshow
+818 1525 moveto
+/g0055 glyphshow
+830 1525 moveto
+/g0048 glyphshow
+848 1525 moveto
+/g0047 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+866 1525 moveto
+/g0042 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+884 1525 moveto
+/g0047 glyphshow
+903 1525 moveto
+/g0055 glyphshow
+915 1525 moveto
+/g004c glyphshow
+923 1525 moveto
+/g0059 glyphshow
+939 1525 moveto
+/g0048 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+957 1525 moveto
+/g000c glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+1.9995 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1124 1489 m 1369 1490 l stroke
+GSE
+GpPBeg1
+0 0 0 SC
+NP 1401 1490 m 1385 1500 l 1385 1481 l 1401 1490 l CP 
+1385 1500 m 1401 1490 l 1385 1500 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1401 1490 m 1385 1500 l 1385 1481 l 1401 1490 l CP 
+stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1385 1500 m 1401 1490 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+1.9995 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1385 1490 m 1359 1490 l stroke
+GSE
+GpPBeg1
+1 1 1 SC
+NP 1142 1425 m 1384 1425 l 1384 1465 l 1142 1465 l CP 
+eofill
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+1141 1455 moveto
+/g0029 glyphshow
+1159 1455 moveto
+/g0052 glyphshow
+1177 1455 moveto
+/g004f glyphshow
+1184 1455 moveto
+/g004f glyphshow
+1192 1455 moveto
+/g0052 glyphshow
+1210 1455 moveto
+/g005a glyphshow
+1235 1455 moveto
+/g0026 glyphshow
+1255 1455 moveto
+/g0052 glyphshow
+1273 1455 moveto
+/g0050 glyphshow
+1301 1455 moveto
+/g0050 glyphshow
+1329 1455 moveto
+/g0044 glyphshow
+1346 1455 moveto
+/g0051 glyphshow
+1365 1455 moveto
+/g0047 glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+0.8196 0.9215 0.9450 SC
+NP 693 428 m 1201 428 l 1201 675 l 693 675 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 693 675 m 1201 675 l 1201 428 l 693 428 l 693 675 l CP 
+stroke
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[42 0 0 -42 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+750 543 moveto
+/g0024 glyphshow
+775 543 moveto
+/g0051 glyphshow
+798 543 moveto
+/g004a glyphshow
+821 543 moveto
+/g004f glyphshow
+831 543 moveto
+/g0048 glyphshow
+852 543 moveto
+/g0037 glyphshow
+877 543 moveto
+/g0052 glyphshow
+899 543 moveto
+/g0037 glyphshow
+924 543 moveto
+/g0044 glyphshow
+946 543 moveto
+/g0045 glyphshow
+969 543 moveto
+/g004f glyphshow
+978 543 moveto
+/g0048 glyphshow
+1000 543 moveto
+/g0033 glyphshow
+1023 543 moveto
+/g0052 glyphshow
+1046 543 moveto
+/g0056 glyphshow
+1064 543 moveto
+/g004c glyphshow
+1074 543 moveto
+/g0057 glyphshow
+1088 543 moveto
+/g004c glyphshow
+1097 543 moveto
+/g0052 glyphshow
+1120 543 moveto
+/g0051 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+847 586 moveto
+/g000b glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+859 586 moveto
+/g0044 glyphshow
+877 586 moveto
+/g004f glyphshow
+884 586 moveto
+/g0049 glyphshow
+895 586 moveto
+/g0055 glyphshow
+907 586 moveto
+/g0048 glyphshow
+925 586 moveto
+/g0047 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+943 586 moveto
+/g0042 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+961 586 moveto
+/g0057 glyphshow
+972 586 moveto
+/g0044 glyphshow
+990 586 moveto
+/g0045 glyphshow
+1008 586 moveto
+/g004f glyphshow
+1016 586 moveto
+/g0048 glyphshow
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+1033 586 moveto
+/g000c glyphshow
+%%BeginDocument: Wine passthrough
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+1.9995 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1201 540 m 1370 540 l stroke
+GSE
+GpPBeg1
+0 0 0 SC
+NP 1403 540 m 1387 549 l 1387 530 l 1403 540 l CP 
+1387 549 m 1403 540 l 1387 549 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1403 540 m 1387 549 l 1387 530 l 1403 540 l CP 
+stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+2.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1387 549 m 1403 540 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+1.9995 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 1387 540 m 1360 540 l stroke
+GSE
+GpPBeg1
+1 1 1 SC
+NP 1204 475 m 1399 475 l 1399 515 l 1204 515 l CP 
+eofill
+GSE
+
+%%EndDocument
+0.00 0.00 0.00 setrgbcolor
+/Tahoma findfont
+[33 0 0 -33 0 0]
+0 10 div matrix rotate
+matrix concatmatrix
+makefont setfont
+1204 505 moveto
+/g0037 glyphshow
+1223 505 moveto
+/g0044 glyphshow
+1241 505 moveto
+/g0045 glyphshow
+1259 505 moveto
+/g004f glyphshow
+1267 505 moveto
+/g0048 glyphshow
+1284 505 moveto
+/g0033 glyphshow
+1303 505 moveto
+/g0052 glyphshow
+1321 505 moveto
+/g0056 glyphshow
+1336 505 moveto
+/g004c glyphshow
+1343 505 moveto
+/g0057 glyphshow
+1354 505 moveto
+/g004c glyphshow
+1362 505 moveto
+/g0052 glyphshow
+1380 505 moveto
+/g0051 glyphshow
+pgsave restore
+showpage
+%%Trailer
+%%Pages: 1
+%%EOF

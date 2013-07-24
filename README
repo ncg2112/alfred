@@ -1,0 +1,199 @@
+Alfred
+Senior Design 2013 & Cornell Cup 2013
+Michael Mournighan, Miguel Rodriguez, Ottman Tertuliano, Joseph DelPreto, Nathan Grubb
+
+This project uses the Robot Operating System (ROS), documented at www.ros.org.
+Alfred uses ROS Version Electric.
+
+If you are unfamiliar with ROS then the tutorial there is a good introduction. Alfred
+uses only subscription messages, not services, and doing the tutorial up to 
+subscribing/publishing is sufficient.
+
+
+**********************************************************************************
+ROS Node Structure:
+
+There are 7 ROS nodes split into 3 ROS projects used on Alfred.
+The 3 ROS projects are alfred_drive alfred_table alfred_msg
+
+alfred_drive contains the nodes relevant to the base movement
+alfred_table contains the nodes relevent to table movement and balancing
+alfred_msg contains the messages that each node publishes/subscribes to
+
+The interaction of the nodes, in the messages they send to each other, is
+documented in ROSNodes.pdf
+Each message format is defined in alfred_msg/msg
+
+The document should be read from left to right, from sensor data, through
+processing nodes, and finally to motor commands.
+
+The function of each node should be somewhat self-explanatory from its name and position,
+and each node is further documented in its cpp file. The project that each node is located
+in is denoted in ROSNodes.pdf, and within the project they are located in ${project}/src
+
+There is one header file that does not correspond to a ROS node, alfred_msg/include/SerialIO.h
+SerialIO.h is a library file that contains useful methods for opening, reading, writing and closing
+UART ports.
+
+**********************************************************************************
+Compiling:
+
+Alfred has 3 ROS projects: alfred_drive alfred_table alfred_msg
+Each ROS Project must be compiled separately, by:
+
+rosmake alfred_drive
+rosmake alfred_table
+rosmake alfred_msg
+
+NOTE: It is not necessary to run the rosmake command from within the
+directory of the project you are compiling.
+
+NOTE: rosmake differs from make in that it follows and compiles dependencies
+on other ROS projects. If the dependencies have not changed it is sufficient to
+run make from within a project directory. If you do so, then on the Intel Dev Board
+I have set up colorgcc to make compiling and debugging easier.
+
+
+**********************************************************************************
+Running:
+
+First, open a separate terminal and run:
+roscore
+
+To run a ROS node, open in a separate terminal for each node and run:
+rosrun ${project_name} {optional_args}
+
+Each of Alfred's ROS nodes is equipped to wait until nodes farther upstream
+are started without error, and so there is no required order for starting nodes.
+However, it is recommended that you start at the farthest downstream node and work
+upstream, in order that the feedback loops are connected to the physical output before
+they run. If this is not true, then the integral terms tend to grow very large, and there
+is a large, sudden and unexpected movement that can cause problems when nodes downstream
+are turned on.
+
+To run the drive in push mode the following nodes are needed:
+
+ReadPlatformFromSerial
+BaseMotorController
+OutputMotorToSerial
+
+To run the drive in follow mode the following nodes are needed:
+
+ReadPlatformFromSerial
+openni_tracker
+FollowMotorController
+BaseMotorController
+OutputMotorToSerial
+
+To run the table movement and balancing the following nodes are needed:
+
+ReadPlatfromFromSerial
+AngleToTablePosition
+TableEncoderPID
+OutputMotorToSerial
+
+And of course, to run all functionality at once all nodes are needed.
+
+
+
+**********************************************************************************
+Scripts:
+
+There are a number of bash scrips put together that will start the requried nodes, and
+route their output to log files.
+
+For an unknown reason, although they simply start each node, they do not work consistently.
+This would be a good place to start, as if they worked it would greatly reduce the time needed
+to start Alfred, and could be added to the startup programs so that Alfred starts running
+on powerup.
+
+Also, though it is not a script, rviz should be mentioned here. rviz is a ROS node that
+can display transforms as they are updated, and we used it to demonstrate the kinect
+skeletal tracking. Run it with 
+rosrun rviz rviz
+
+Note that rviz does not always start. As far as I can tell, this is a known bug within 
+gnome, without a known solution. Just try running rviz repeatedly, eventually it will work.
+
+
+**********************************************************************************
+Known Bugs:
+
+This is a list of the know bugs, and my guesses for where they are located. Unfortunately,
+as we had no time to set up a simulator, it is impossible to debig these without Alfred present.
+On the bright side, each node has one simple function, and so most bugs will be present within a 
+single node. Some, however, may be in the way nodes interact.
+
+This list is in no particular order.
+
+****
+Startup Scripts:
+
+The startup scripts do not work consistently. This is especially true of the scripts that
+start the openni_tracker node. The node rarely connects succsessfully to the kinect on the first
+try, usually the node has to be started several times.
+
+I do not have a good guess as to why these fail, there was no time to debug the scripts.
+
+****
+Lead Nut positions error:
+
+After a long run time sometimes the lead screw nut positions had an error. This was that 2 nuts opposite
+each other would be several inches lower than the other 2 nuts.
+
+This is a rough picture. Looking straight at the lead screws along the x axis, such that one lead screw is
+hidden behind the center one:
+  | | |
+  O | O
+  | O |
+  | | |
+
+This would, of course, introduce a dangerous bend in the table top.
+
+
+My guess is that this bug is in the AngleToTablePosition node. Looking at the output from the TableEncoderPID
+and AngleToTablePosition it appeared as if the PID was still bringing the nuts correctly to the desired positions,
+but the desired positions had that error.
+I do not know if this is a gradual drift, or if there is some set of inputs that generates the error.
+
+****
+Follow rotation errors
+
+When in follow mode, Alfred would correctly move if the user was directly in froint, but would go crazy when a 
+rotation was required in order to keep the user in front as the user moved sideways.
+
+This error should be in the FollowMotorController node. I have a feeling this is just an incredibly stupid error
+caused by writing too much code at once, since the torso position has been confirmed as correct and the follow
+algorithm is so simple.
+
+
+****
+Balance Errors while moving
+
+When we first tried all Alfred's functionality at once, moving through push mode would cause the table to stop
+balancing and go crazy.
+This was mitigated by increasing the update rate of every ROS node.
+
+I do not belive this issue was actually solved, just minmized so that we don't notice it because the table PID
+is poorly tuned, and this bug is hiding within the PID error.
+
+This is probably in OutputMotorToSerial. If it is not, then it is either in the way OutputMotorToSerial behaves
+receving simultaneous messages, or it might even be within how ROS handles passing simultaneous messages, though
+the latter seems unlikely.
+
+
+****
+Poorly tuned Table PID
+
+The Table PID loop is poorly tuned. This affects everything from the speed at which it responds to tipping the base,
+to making it feel jerky when raising or lowering the table.
+
+
+****
+Poorly tuned base PID
+
+The base PID loop actually runs within the arduino. It actually appeared that Alfred ran smoother and more consistently
+when we removed that loop entirely.
+
+If Alfred refuses to move correctly, then check that the drive motors are plugged in. It proved impossible to solder half
+the contacts down there without removing the motors, and they have been know to come unplugged.

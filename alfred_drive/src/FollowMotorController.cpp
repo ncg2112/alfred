@@ -4,6 +4,26 @@
  * Nathan Grubb
  * April 2013
  *
+ *
+ * FollowMotorController ROS Noded
+ *
+ * This Node listens to the transforms the openni_tracker node publishes which
+ * are the coordinates of each joint in all the skeletons being tracked.
+ *
+ * It selects the right torso to track, defined as the lowest torso index that
+ * has been updated within a timeout. The openni_tracker labels torsos by an index
+ * from 1 to n, torso1 torso2 etc.
+ *
+ * Once it has received an updated transform from the correct torso it runs a
+ * simple algorithm to determine the forward and angular speed of the robot.
+ * It defines an arc of a donought as the target area, where it will not move if
+ * the torso is within. Otherwise, it sets the forward or angular velocity to a
+ * to a constant value in the correct direction to move the torso into that arc.
+ *
+ * Once the forward and angular speeds are determined it projects those onto
+ * each motor, and publishes those as a FollowCommand. The motor outputs are
+ * not ramped in this node, but in the BaseMotorController node.
+ *
  */
    
 // ROS
@@ -40,9 +60,9 @@ int main(int argc, char **argv)
    double THETA_M2 = -60.0;
    double THETA_M3 = 180.0;
 
-   double MAX_ACCELERATION = 8;      // In % per second
+   double MAX_ACCELERATION = 8;      // In % per second       NOT USED - FROM EARLIER VERSION - used to ramp speeds
    double LOOP_RATE = 30.0;            // In Hz
-   double MAX_ACC_PER_LOOP = MAX_ACCELERATION / LOOP_RATE;
+   double MAX_ACC_PER_LOOP = MAX_ACCELERATION / LOOP_RATE; // NOT USED - FROM EARLEIR VERSION - used to ramp speeds
 
 
    // Projection of the forward-facing unti vector onto each wheel vector
@@ -57,7 +77,7 @@ int main(int argc, char **argv)
    ros::Publisher drive_pub = node.advertise<alfred_msg::FollowCommand>("FollowCommand", 2);
  
    tf::TransformListener listener;
-   ros::Rate rate(10.0);
+   ros::Rate rate(LOOP_RATE);
       
    /******** Loop variables Setup *********/
    // Targets refer to torso position
@@ -89,6 +109,7 @@ int main(int argc, char **argv)
          std::vector<std::string> frameIds;
          listener.getFrameStrings( frameIds );
 
+         // If we have a valid torso name
          if( torsoName.compare("") ){
 
             /****************
@@ -117,6 +138,7 @@ int main(int argc, char **argv)
                else
                   angularSpeed = 0.0;
             }
+            // if the transform isn't updated, this is not a valid torso
             else{
                updating = false;
                torsoName = "";
@@ -127,6 +149,7 @@ int main(int argc, char **argv)
                ROS_WARN("Target values not updating\n");
                
          }
+         // If we don't have a valid torso name
          else{
 
             if( torsoNum >= frameIds.size() )
@@ -169,22 +192,6 @@ int main(int argc, char **argv)
       targetM2 = targetM2 - angularSpeed; 
       targetM3 = targetM3 - angularSpeed; 
      
-      /* 
-      // now we go from the target velocity to the current velocity
-      //  This is just a ramp function
-      double diff1 = targetM1 - motor1;
-      double diff2 = targetM2 - motor2;
-      double diff3 = targetM3 - motor3;
-
-      diff1 = diff1 > 0 ? std::min(diff1, MAX_ACC_PER_LOOP) : std::max(diff1, -1.0*MAX_ACC_PER_LOOP);
-      diff2 = diff2 > 0 ? std::min(diff2, MAX_ACC_PER_LOOP) : std::max(diff2, -1.0*MAX_ACC_PER_LOOP);
-      diff3 = diff3 > 0 ? std::min(diff3, MAX_ACC_PER_LOOP) : std::max(diff3, -1.0*MAX_ACC_PER_LOOP);
-
-      motor1 = motor1 + diff1;
-      motor2 = motor2 + diff2;
-      motor3 = motor3 + diff3;
-      */
-
       motor1 = targetM1;
       motor2 = targetM2;
       motor3 = targetM3;
